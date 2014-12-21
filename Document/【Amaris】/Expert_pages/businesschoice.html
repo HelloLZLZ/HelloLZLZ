@@ -1,0 +1,147 @@
+<!doctype html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>无标题文档</title>
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script type="text/javascript">
+	$(document).on("click","#aii",function(){alert("clicked!");})
+	</script>
+</head>
+
+<body>
+<div data-role="page" id="businesschoice_first">
+  <div data-role="header" data-theme="b">
+    <h1>行业类别</h1>
+  </div>
+  
+    <div data-role="collapsible-set">
+      <div data-role="collapsible">
+        <h3>IT|通信|电子|互联网</h3>
+        <ul data-role="listview">
+          <li><a href="#">互联网/电子商务</a></li>
+          <li><a href="#">计算机软件</a></li>
+          <li><a href="#">IT服务(系统/数据/维护)</a></li>
+          <li><a href="#">电子技术/半导体/集成电路</a></li>
+          <li><a href="#">计算机硬件</a></li>
+          <li><a href="#">通信/电信/网络设备</a></li>
+          <li><a href="#">通信/电信运营、增值服务</a></li>
+          <li><a href="#">网络游戏</a></li>
+        </ul>
+      </div>
+      <div data-role="collapsible" data-collapsed="true">
+        <h3>金融业</h3>
+        <ul data-role="listview">
+          <li><a href="#">基金/证券/期货/投资</a></li>
+          <li><a href="#">保险</a></li>
+          <li><a href="#">银行</a></li>
+          <li><a href="#">信托/担保/拍卖/典当</a></li>
+        </ul>
+      </div>
+      <div data-role="collapsible" data-collapsed="true">
+        <h3>房地产|建筑业</h3>
+        <ul data-role="listview">
+          <li><a href="#">房地产/建筑/建材/工程</a></li>
+          <li><a href="#">家居/室内设计/装饰装潢</a></li>
+          <li><a href="#">物业管理/商业中心</a></li>
+        </ul>
+      </div>
+      <div data-role="collapsible" data-collapsed="true">
+        <h3>商业服务</h3>
+        <ul data-role="listview">
+          <li><a href="#">专业服务/咨询</a></li>
+          <li><a href="#">广告/会展/公关</a></li>
+          <li><a href="#">中介服务</a></li>
+          <li><a href="#">检验/检测/认证</a></li>
+          <li><a href="#">外包服务</a></li>
+        </ul>
+      </div>
+      <div data-role="collapsible" data-collapsed="true">
+        <h3>贸易|批发|零售|租赁业</h3>
+        <ul data-role="listview">
+          <li><a href="#">快速消费品</a></li>
+          <li><a href="#">耐用消费品</a></li>
+          <li><a href="#">贸易/进出口</a></li>
+          <li><a href="#">零售/批发</a></li>
+          <li><a href="#">租赁服务</a></li>
+        </ul>
+      </div>
+      <div data-role="collapsible" data-collapsed="true">
+        <h3>文体教育|工艺美术</h3>
+        <ul data-role="listview">
+          <li><a href="#">教育/培训/院校</a></li>
+          <li><a href="#">礼品/工艺美术/奢侈品</a></li>
+        </ul>
+      </div>
+      <div data-role="collapsible" data-collapsed="true">
+        <h3>生产|加工|制造</h3>
+        <ul data-role="listview">
+          <li><a href="#">汽车/摩托车</a></li>
+          <li><a href="#">大型设备/机电设备/重工业</a></li>
+          <li><a href="#">加工制造（原料加工/模具）</a></li>
+          <li><a href="#">仪器仪表及工业自动化</a></li>
+          <li><a href="#">印刷/包装/造纸</a></li>
+          <li><a href="#">办公用品及设备</a></li>
+          <li><a href="#">医药/生物工程</a></li>
+          <li><a href="#">医疗设备/器械</a></li>
+          <li><a href="#">航空/航天研究与制造</a></li>
+        </ul>
+      </div>
+      <div data-role="collapsible" data-collapsed="true">
+        <h3>交通|运输|物流|仓储</h3>
+        <ul data-role="listview">
+          <li><a href="#">交通/运输</a></li>
+          <li><a href="#">物流/仓储</a></li>
+        </ul>
+      </div>
+      <div data-role="collapsible" data-collapsed="true">
+        <h3>服务业</h3>
+        <ul data-role="listview">
+          <li><a href="#">医疗/护理/美容/保健/卫生</a></li>
+          <li><a href="#">家居/餐饮</a></li>
+          <li><a href="#">旅游/度假</a></li>
+        </ul>
+      </div>
+      <div data-role="collapsible" data-collapsed="true">
+        <h3>文化|传媒|娱乐|体育</h3>
+        <ul data-role="listview">
+          <li><a href="#">媒体/出版/影视/文化传播</a></li>
+          <li><a href="#">娱乐/体育/休闲</a></li>
+        </ul>
+      </div>
+      <div data-role="collapsible" data-collapsed="true">
+        <h3>能源|矿产|环保</h3>
+        <ul data-role="listview">
+          <li><a href="#">能源/矿产/采掘/冶炼</a></li>
+          <li><a href="#">石油/石化/化工</a></li>
+          <li><a href="#">电气/电力/水利</a></li>
+          <li><a href="#">环保</a></li>
+        </ul>
+      </div>
+      <div data-role="collapsible" data-collapsed="true">
+        <h3>政府|非盈利机构</h3>
+        <ul data-role="listview">
+          <li><a href="#">政府/公共事业/非盈利机构</a></li>
+          <li><a href="#">学术/科研</a></li>
+        </ul>
+      </div>
+      <div data-role="collapsible" data-collapsed="true">
+        <h3>农|林|牧|渔|其他</h3>
+        <ul data-role="listview">
+          <li><a href="#">农/林/牧/渔</a></li>
+          <li><a href="#">跨领域经营</a></li>
+          <li><a href="#">其他</a></li>
+        </ul>
+      </div>
+    </div>
+  
+  <div data-role="footer">
+    <h4>脚注</h4>
+  </div>
+</div>
+
+
+</body>
+</html>

@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>无标题文档</title>
     <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
     <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
@@ -9,7 +9,7 @@
 </head>
 
 <body>
-<div data-role="page" id="page">
+<div data-role="page" id="basicinfo_expert">
   
   <div data-role="header" data-theme="b">
     <h1>基本信息</h1>
@@ -17,33 +17,54 @@
   
   <div data-role="content">
     <div data-role="fieldcontain">
-    	<p>
-      		<label for="nameinput">真实姓名:</label>
-        </p> 
-      	<input type="text" name="nameinput" id="name" value=""  />
+      	<p><label for="usernameinput">用户名:</label></p>
+      	<input type="text" name="usernameinput" id="username" value=""  />
     </div>
     
     <div data-role="fieldcontain">
-    	<p>
-    		<label for="passwordinput">密码输入:</label>
-      	</p>	
+    	<p><label for="passwordinput">密码输入:</label></p>	
         <input type="password" name="passwordinput" id="password" value=""  />
-    </div>
-    
-    <div data-role="fieldcontain">
-    	<p>
-    		<label for="surepasswordinput">确认密码:</label>
-    	</p>
+		
+    	<p><label for="surepasswordinput">确认密码:</label></p>
         <input type="password" name="surepasswordinput" id="surepassword" value=""  />
     </div>
     <br />
-    <a href="#" data-role="button">下一步</a>
+    <a href="#fieldinfo_expert" data-role="button">下一步</a>
   </div>
-
   
   <div data-role="footer">
   </div>
 </div>
-	
+
+<div data-role="page" id="fieldinfo_expert">
+  <div data-role="header" data-theme="b">
+    <h1>详细信息</h1>
+  </div>
+  <div data-role="content">
+    <div data-role="fieldcontain">
+      <p><label for="nameinput">真实姓名:</label></p>
+      <input type="text" name="nameinput" id="name" value=""  />
+      <p><label for="numberinput">电话:</label></p>
+      <input type="text" name="numberinput" id="number" value=""  />
+    </div>
+    <div data-role="fieldcontain">
+      <ul data-role="listview">
+        <li><a href="D:\学习\课程\工程实践\Expert_pages\businesschoice.html" data-rel="external">所属行业</a></li>
+        <li><a href="D:\学习\课程\工程实践\Expert_pages\jobchoice.html">职业领域</a></li>
+      </ul>
+ 
+	</div>
+    <div data-role="fieldcontain">
+      <p><label for="yearinput">入行年数:</label></p>
+      <input type="number" name="yearinput" id="year" value="0"  />
+    </div>
+	<input type="submit" value="注册" />
+  </div>
+  <div data-role="footer">
+    <h4>脚注</h4>
+  </div>
+</div>
+
+
 </body>
 </html>
