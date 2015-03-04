@@ -9,6 +9,34 @@
     <script type="text/javascript">
 	$(document).on("click","#aii",function(){alert("clicked!");})
 	</script>
+    
+    <script type="text/javascript">
+		function change(object)
+		{
+//			localStorage.setItem("job",object.innerHTML);
+			var hre = localStorage.getItem("location_register");
+			var str = decodeURI(hre);
+			str = str.split("&")
+			if(str.length == 2) {
+				var cut1 = str[0].split("=");
+				var cut2 = str[1].split("=");
+				if(cut1[0] == "?business") {
+					hre = "register_expert.html?business=" + object.innerHTML + "&" + str[1];
+				} else {
+					hre = "register_expert.html" + str[0] + "&business=" + object.innerHTML;
+				}
+			} else {
+				if(hre == "") {
+					hre = "register_expert.html" + "?business=" + object.innerHTML;
+				} else {
+					hre = "register_expert.html" + hre + "&business=" + object.innerHTML;
+				}
+			}
+			var newString = encodeURI(hre);
+			object.rel = "external";
+			object.href = newString;
+		}
+	</script>
 </head>
 
 <body>
@@ -21,7 +49,7 @@
       <div data-role="collapsible">
         <h3>IT|通信|电子|互联网</h3>
         <ul data-role="listview">
-          <li><a href="#">互联网/电子商务</a></li>
+          <li><a onClick="change(this)">互联网/电子商务</a></li>
           <li><a href="#">计算机软件</a></li>
           <li><a href="#">IT服务(系统/数据/维护)</a></li>
           <li><a href="#">电子技术/半导体/集成电路</a></li>

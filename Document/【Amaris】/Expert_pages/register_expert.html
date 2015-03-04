@@ -1,70 +1,166 @@
 <!doctype html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>无标题文档</title>
-    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
-    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content=" initial-scale=1.0,user-scalable=no" />
+	<title>无标题文档</title>
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+	<script type="text/javascript">
+		$(document).on("click","a",ClickMe(event));
+		var str = decodeURI(window.location.search);
+		localStorage.setItem("location_register",str);
+	</script>
+	<noscript>您的浏览器不支持JavaScript,请使用其它浏览器</noscript>
+	<script type="text/javascript" src="regist_validate.js"></script>
 </head>
 
 <body>
 <div data-role="page" id="basicinfo_expert">
-  
-  <div data-role="header" data-theme="b">
-    <h1>基本信息</h1>
-  </div>
-  
-  <div data-role="content">
-    <div data-role="fieldcontain">
-      	<p><label for="usernameinput">用户名:</label></p>
-      	<input type="text" name="usernameinput" id="username" value=""  />
-    </div>
+	<div data-role="header" data-theme="b">
+    	<h1>专家认证</h1>
+  	</div>
     
-    <div data-role="fieldcontain">
-    	<p><label for="passwordinput">密码输入:</label></p>	
-        <input type="password" name="passwordinput" id="password" value=""  />
+    <div data-role="content">
+		<form method="post" action="">
+			<div data-role="fieldcontain">
+        		<label for="UserName">用户名:</label>
+        		<input type="text" name="UserNameInput" id="UserName" value="" placeholder="仅包括数字、字母或下划线" />
+            </div>      	      
+            <div data-role="fieldcontain">
+        		<label for="Password">密码输入:</label>
+        		<input type="password" name="PasswordInput" id="Password" value="" placeholder="仅包括数字、字母或下划线"/>
+      		</div>
+            <div data-role="fieldcontain">
+        		<label for="ComfirmPassword">确认密码:</label>
+        		<input type="password" name="ComfirmPasswordInput" id="ComfirmPassword" value="" />
+      		</div>
+            <div data-role="fieldcontain">
+       		 	<label for="Name">真实姓名:</label>
+      		  	<input type="text" name="NameInput" id="Name" value=""  />
+      		</div>
+            <div data-role="fieldcontain">
+        		<label for="PhoneNumber">手机号码:</label>
+        		<input type="number" name="PhoneNumberInput" id="PhoneNumber" value=""  />
+      		</div>
+            <div data-role="fieldcontain">
+        		<label for="BusinessSelect" class="select">所属行业:</label>
+        		<select name="BusinessSelectMenu" id="BusinessSelect">
+                  <option value="option1">IT|通信|电子|互联网</option>
+                  <option value="option2">金融业</option>
+                  <option value="option3">房地产|建筑业</option>
+                  <option value="option3">商业服务</option>
+                  <option value="option3">贸易|批发|零售|租赁业</option>
+                  <option value="option3">文教体育|工业美术</option>
+                  <option value="option3">生产|加工|制造</option>
+                  <option value="option3">交通|运输|物流|仓储</option>
+                  <option value="option3">服务业</option>
+                  <option value="option3">文化|传媒|娱乐|体育</option>
+                  <option value="option3">能源|矿产|环保</option>
+                  <option value="option3">政府|非盈利机构</option>
+                  <option value="option3">农|林|牧|渔|其他</option>
+                </select>
+      		</div>
+            <div data-role="fieldcontain">
+        		<label for="JobSelect" class="select">专长领域:</label>
+        		<select name="JobSelectMenu" id="JobSelect">
+                  <option value="option1">销售|客服|市场</option>
+                  <option value="option2">财务|人力资源|行政</option>
+                  <option value="option3">项目|质量|高级管理</option>
+                  <option value="option3">IT|互联网|通信</option>
+                  <option value="option3">房产|建筑|物业管理</option>
+                  <option value="option3">金融</option>
+                  <option value="option3">采购|贸易|交通|物流</option>
+                  <option value="option3">生产|制造</option>
+                  <option value="option3">传媒|印刷|艺术|设计</option>
+                  <option value="option3">咨询|法律|教育|翻译</option>
+                  <option value="option3">服务业</option>
+                  <option value="option3">能源|环保|农业|科研</option>
+                  <option value="option3">兼职|实习|社工|其他</option>
+                </select>
+      		</div>
+            <div data-role="fieldcontain">
+        		<label for="Year">入行年数:</label>
+        		<input type="number" name="YearInput" id="Year" value="" placeholder="请输入0~100之间的数字"/>
+      		</div>
+            <input type="submit" value="注册" />
+        </form>
+  </div>
+        <div data-role="footer"> </div>
+        </div>
 		
-    	<p><label for="surepasswordinput">确认密码:</label></p>
-        <input type="password" name="surepasswordinput" id="surepassword" value=""  />
-    </div>
-    <br />
-    <a href="#fieldinfo_expert" data-role="button">下一步</a>
-  </div>
-  
-  <div data-role="footer">
-  </div>
-</div>
-
-<div data-role="page" id="fieldinfo_expert">
-  <div data-role="header" data-theme="b">
-    <h1>详细信息</h1>
-  </div>
-  <div data-role="content">
-    <div data-role="fieldcontain">
-      <p><label for="nameinput">真实姓名:</label></p>
-      <input type="text" name="nameinput" id="name" value=""  />
-      <p><label for="numberinput">电话:</label></p>
-      <input type="text" name="numberinput" id="number" value=""  />
-    </div>
-    <div data-role="fieldcontain">
-      <ul data-role="listview">
-        <li><a href="D:\学习\课程\工程实践\Expert_pages\businesschoice.html" data-rel="external">所属行业</a></li>
-        <li><a href="D:\学习\课程\工程实践\Expert_pages\jobchoice.html">职业领域</a></li>
-      </ul>
- 
-	</div>
-    <div data-role="fieldcontain">
-      <p><label for="yearinput">入行年数:</label></p>
-      <input type="number" name="yearinput" id="year" value="0"  />
-    </div>
-	<input type="submit" value="注册" />
-  </div>
-  <div data-role="footer">
-    <h4>脚注</h4>
-  </div>
-</div>
-
-
+	<script type="text/javascript">		
+			$("form").submit(function(e) {
+				if(isNull($("#UserName").val())) {
+					e.preventDefault();
+					alert("用户名不能为空");
+				}else if(isNull($("#Password").val())) {
+					e.preventDefault();
+					alert("密码不能为空");
+				}else if(isNull($("#ComfirmPassword").val())) {
+					e.preventDefault();
+					alert("请确认密码");
+				}else if(isNull($("#Name").val())) {
+					e.preventDefault();
+					alert("请输入真实姓名");
+				}else if(isNull($("#PhoneNumber").val())) {
+					e.preventDefault();
+					alert("请输入手机号码");
+				}else if(isNull($("#Year").val())) {
+					e.preventDefault();
+					alert("请输入入行年数");
+				}else if(!isNumberOr_Letter($("#UserName").val())) {
+					e.preventDefault();
+					alert("用户名格式不合法，仅包含数字、字母或下划线");
+				}else if(!isNumberOr_Letter($("#Password").val())) {
+					e.preventDefault();
+					alert("密码格式不合法，仅包含数字、字母或下划线");
+				}else if(!isSameString($("#ComfirmPassword").val(),$("#Password").val())) {
+					e.preventDefault();
+					alert("两次密码输入不一致");
+				}else if(!isMobile($("#PhoneNumber").val())) {
+					e.preventDefault();
+					alert("手机号码格式不合法");
+				}else if(!isCareerYear($("#Year").val())) {
+					e.preventDefault();
+					alert("入行年份格式不合法，请输入0-100之间的数");
+				}
+			});
+			
+/*			var str = decodeURI(window.location.search);
+		
+			var hre_search = str.split("&");
+			var arr1 = hre_search[0].split("=");
+			if(hre_search[1] != undefined) 
+			{
+				var arr2 = hre_search[1].split("=");
+			}
+			if(arr1[0] == "?business")
+			{
+				if(arr1[1] != undefined) 
+				{
+					document.getElementById("business").innerHTML = arr1[1];
+				}
+				if(arr2[1] != undefined) 
+				{
+					document.getElementById("job").innerHTML = arr2[1];
+				}
+			} 
+			else if(arr1[0] == "?job"){
+				if(arr1[1] != undefined) 
+				{
+					document.getElementById("job").innerHTML = arr1[1];
+				}
+				if(arr2[1] != undefined) 
+				{
+					document.getElementById("business").innerHTML = arr2[1];
+				}
+			}
+			*/
+	</script>
 </body>
 </html>
