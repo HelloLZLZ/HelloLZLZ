@@ -1,5 +1,8 @@
 <%@ page contentType="text/html; charset=utf-8" language="java" import="java.sql.*" errorPage="" %>
 <%
+//从servlet获取项目数据
+	ArrayList list = (ArrayList)request.getAttribute("xxx");
+%>	
 <!doctype html>
 <html>
 <head>
@@ -20,39 +23,39 @@
     <h1>项目列表</h1>
   </div>
   <div data-role="content">
-  	<div class="doctor-item" data-did="clinic_web_27367e8474d9f220">
-            <div class="doctor-portait">
-                <img src="http://media.chunyuyisheng.com/media/images/2015/02/06/e4cf6960364c_w295_h295_.jpg" alt="黄勇医生"/>
+	<%
+	//从返回的数据中取出数据并填写在dom中，？？？表示需要动态添加的数据
+	for(int i=0;i < list.size(); i++) {
+		Map map = (Map) list.get(i);
+	%>
+  	<div class="project-item" data-id="???">
+            <div class="project-name">
+                ???
             </div>
-            <div class="doctor-body">
-                <div class="doctor-line"><div class='name'>黄勇</div>
-                    
-                        
-                        <div class='price'>服务价格&nbsp;<span class='price-text'>￥50</span></div>
-                        
-                    
-
+            <div class="project-body">
+                <div class="project-line">
+                	<div class='price'>项目预算&nbsp;<span class='price-text'>???</span></div>
+                    <div class='name'>???</div>
+                    <div class="reply-star">???</div>
                 </div>
-                <div class="doctor-line department">主治医师/小儿科</div>
-                <div class="doctor-line hospital">四川省人民医院</div>
-
-                <div class="doctor-line">从事儿科临床工作十六年，具有丰富的临床经验，对儿科常见病及多发病十分熟悉，尤其擅长儿科急重症的处理</div>
-                <div class="doctor-line"><span class='reply-info'>21&nbsp;解答<span class="reply-sep">&nbsp;&nbsp;|&nbsp;&nbsp;</span><span class='reply-star'>5.0</span>/5&nbsp;星</span></div>
-                <div class="clear-div"></div>
+                <div class="project-line brief">???</div>
+                <div class="project-line hospital">
+                	<div class="launchtime">???发布</div>
+                    <div class="deadline">???截止</div>
+                </div>
             </div>
-		</div>
+	</div>
+    <%
+	}
+	%>
   </div>
 
 </div>
 </body>
 <script type="text/javascript">
-/*	$(document).ready(function(e) {
-        var str = decodeURI(window.location.search);
-		alert(str);
-		var codeArray = str.split("=");
-		var code = codeArray[1];
-		alert(code);
+	$(".project-item").click(function(e) {
+        var project_id = $(this).attr("data-id");
+		window.location.href = "xxxservlet?project="+project_id;
     });
-	*/
 </script>
 </html>
