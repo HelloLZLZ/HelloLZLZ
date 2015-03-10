@@ -28,20 +28,20 @@
 	for(int i=0;i < list.size(); i++) {
 		Map map = (Map) list.get(i);
 	%>
-  	<div class="project-item" data-id="???">
-    	<div class="project-name">???</div>
-        <div class="project-body">
-        	<div class="project-line">
-            	<div class='price'>项目预算&nbsp;<span class='price-text'>???</span></div>
-                <div class='company'>???</div>
+  	<div class="expert-item" data-id="???">
+    	<div class="expert-portait">
+        	<img src="???" alt="???"/>
+    	</div>
+        <div class="expert-body">
+        	<div class="expert-line name">???</div>
+            <div class="expert-line job">???/???</div>
+            <div class="expert-line company">???</div>
+			<div class="expert-line brief">???</div>
+            <div class="expert-line">
+				<div class="projectnumber">???项目</div>
                 <div class="reply-star">???/5.0</div>
             </div>
-            <div class="project-line brief">???</div>
-            <div class="project-line">
-            	<div class="launchtime">???发布</div>
-                <div class="deadline">???截止</div>
-            </div>
-        </div>
+		</div>
 	</div>
     <%
 	}
@@ -49,7 +49,7 @@
   </div>
 </div>
 <script type="text/javascript">
-	$(".project-item").click(function(e) {
+	$(".expert-item").click(function(e) {
         var project_id = $(this).attr("data-id");
 		window.location.href = "xxxservlet?project="+project_id;
     });
