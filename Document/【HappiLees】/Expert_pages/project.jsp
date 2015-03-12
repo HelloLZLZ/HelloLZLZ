@@ -1,3 +1,4 @@
+<%@ page contentType="text/html; charset=utf-8" language="java" import="java.sql.*" errorPage="" %>
 <!doctype html>
 <html>
 <head>
@@ -15,11 +16,15 @@
 <body>
 <div data-role="page" id="page">
     <div data-role="header">
-    	<p align="center">项目</p>
+    	<h1>项目</h1>
     </div>    
 
     <div data-role="content">
-    	<p align="center">此处添加专家或企业的关注的项目列表</p>
+    	<div data-role="navbar">
+      		<ul>
+        		<li><a href="#" data-icon="plus">我的项目</a></li>
+      		</ul>
+    	</div>
 	</div>
     
 	<div data-role="footer" data-position="fixed">
@@ -32,6 +37,7 @@
     	</div>
   	</div>
 </div>
+<script
 </body>
 </html>
   

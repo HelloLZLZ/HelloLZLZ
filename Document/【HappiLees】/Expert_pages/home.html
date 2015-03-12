@@ -11,11 +11,10 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
     <meta content="black" name="apple-mobile-web-app-status-bar-style" />	
 </head>
-
 <body>
 <div data-role="page" id="page">
     <div data-role="header">
-    	<p align="center">首页</p>
+    	<h1>首页</h1>
     </div>    
 
     <div data-role="content">
@@ -24,9 +23,7 @@
   			<div class="ui-block-b"><a href="#" data-role="button">注册</a></div>
 		</div>
     
-		<p align="center">行业分类</p>
-		<hr color="#CCCCCC">
-
+		<p>行业分类123</p>
     	<div>
 			<div><a class="btn_business" href="#" data-role="button" data-code="b_0">IT|通信|电子|互联网</a></div>
 			<div><a class="btn_business" href="#" data-role="button" data-code="b_1">金融业</a></div>
@@ -54,7 +51,6 @@
     	</div>
   	</div>
 </div>
-</body>
 <script type="text/javascript">
 	$(".btn_business").click(function() {
 		var code = $(this).attr("data-code");
@@ -62,6 +58,7 @@
 		window.location.href = "xxxServlet?business="+code;		
 	});
 </script>
+</body>
 </html>
 
   <!--
