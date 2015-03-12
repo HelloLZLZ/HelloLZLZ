@@ -23,7 +23,6 @@
     	<div data-role="navbar">
       		<ul>
         		<li><a href="#" data-icon="plus">我的项目</a></li>
-        		<li><a href="#" data-icon="minus">我的关注</a></li>
       		</ul>
     	</div>
 	</div>

@@ -9,6 +9,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="viewport" content=" initial-scale=1.0,user-scalable=no" />
 	<title>专家汇</title>
+    <link rel="stylesheet" href="project_expert_list.css" />
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
 	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
@@ -28,19 +29,21 @@
 	for(int i=0;i < list.size(); i++) {
 		Map map = (Map) list.get(i);
 	%>
-  	<div class="expert-item" data-id="???">
+  	<div class="expert-item" data-id="123">
     	<div class="expert-portait">
         	<img src="???" alt="???"/>
+            <div class="little-item">
+            	<div class="item-up">??? 项目</div>
+                <div class="item-down">???/5</div>
+            </div>
     	</div>
+        
         <div class="expert-body">
         	<div class="expert-line name">???</div>
             <div class="expert-line job">???/???</div>
             <div class="expert-line company">???</div>
-			<div class="expert-line brief">???</div>
-            <div class="expert-line">
-				<div class="projectnumber">???项目</div>
-                <div class="reply-star">???/5.0</div>
-            </div>
+			<div class="expert-line">???</div>
+            <div class="clear-div"></div>
 		</div>
 	</div>
     <%
