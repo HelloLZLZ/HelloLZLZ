@@ -1,32 +1,25 @@
 <!doctype html>
-<html>
-<head>
+<html><head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="viewport" content=" initial-scale=1.0,user-scalable=no" />
 	<title>专家汇</title>
-	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
-	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+	<link rel="stylesheet" href="jquery/mobile/jquery.mobile-1.4.5.min.css" />
+    <link rel="stylesheet" href="theme.css"/>
+	<script src="jquery/jquery-1.11.1.min.js"></script>
+	<script src="jquery/mobile/jquery.mobile-1.4.5.min.js"></script>
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
     <meta content="black" name="apple-mobile-web-app-status-bar-style" />	
 </head>
-
 <body>
 <div data-role="page" id="page">
-    <div data-role="header">
-    	<p align="center">首页</p>
+    <div class="header" data-role="none">
+    	<h1>首页</h1>
     </div>    
 
     <div data-role="content">
-    	<div class="ui-grid-a">
-  			<div class="ui-block-a"><a href="login.html" rel="external" data-role="button" class="ui-btn-active">登陆</a></div>
-  			<div class="ui-block-b"><a href="#" data-role="button">注册</a></div>
-		</div>
     
-		<p align="center">行业分类</p>
-		<hr color="#CCCCCC">
-
+		<p>行业分类</p>
     	<div>
 			<div><a class="btn_business" href="#" data-role="button" data-code="b_0">IT|通信|电子|互联网</a></div>
 			<div><a class="btn_business" href="#" data-role="button" data-code="b_1">金融业</a></div>
@@ -54,7 +47,6 @@
     	</div>
   	</div>
 </div>
-</body>
 <script type="text/javascript">
 	$(".btn_business").click(function() {
 		var code = $(this).attr("data-code");
@@ -62,6 +54,7 @@
 		window.location.href = "xxxServlet?business="+code;		
 	});
 </script>
+</body>
 </html>
 
   <!--
