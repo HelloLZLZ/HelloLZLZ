@@ -6,6 +6,7 @@
 	<meta name="viewport" content=" initial-scale=1.0,user-scalable=no" />
 	<title>专家汇</title>
 	<link rel="stylesheet" href="jquery/mobile/jquery.mobile-1.4.5.min.css" />
+    <link rel="stylesheet" href="theme.css"/>
 	<script src="jquery/jquery-1.11.1.min.js"></script>
 	<script src="jquery/mobile/jquery.mobile-1.4.5.min.js"></script>
     <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -15,7 +16,7 @@
 
 <body>
 <div data-role="page" id="page">
-    <div data-role="header">
+    <div class="header" data-role="none">
     	<h1>项目</h1>
     </div>    
 

@@ -9,7 +9,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="viewport" content=" initial-scale=1.0,user-scalable=no" />
 	<title>专家汇</title>
-    <link rel="stylesheet" href="project_expert_list.css" />
+    <link rel="stylesheet" href="business_expert.css" />
     <link rel="stylesheet" href="theme.css"/>
 	<link rel="stylesheet" href="jquery/mobile/jquery.mobile-1.4.5.min.css" />
 	<script src="jquery/jquery-1.11.1.min.js"></script>
