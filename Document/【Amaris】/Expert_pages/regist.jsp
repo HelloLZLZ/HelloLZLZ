@@ -5,9 +5,10 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="viewport" content=" initial-scale=1.0,user-scalable=no" />
 	<title>无标题文档</title>
-	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
-	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+	<link rel="stylesheet" href="jquery/mobile/jquery.mobile-1.4.5.min.css" />
+    <link rel="stylesheet" href="theme.css"/>
+	<script src="jquery/jquery-1.11.1.min.js"></script>
+	<script src="jquery/mobile/jquery.mobile-1.4.5.min.js"></script>
     <meta name="apple-mobile-web-app-capable" content="yes"/>
     <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
     <meta content="black" name="apple-mobile-web-app-status-bar-style"/>
@@ -17,7 +18,7 @@
 
 <div data-role="page" id="page">
   
-  <div data-role="header">
+  <div class="header" data-role="none">
     <h1>注册成功</h1>
   </div>
   
