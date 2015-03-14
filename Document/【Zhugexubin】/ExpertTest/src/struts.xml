@@ -19,4 +19,6 @@
 		</action>
 	</package>
 	<include file="login-struts.xml" />
+	<include file="expert-struts.xml" />
+	<include file="fileupload-struts.xml" />
 </struts>

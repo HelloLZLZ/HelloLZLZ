@@ -8,7 +8,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="viewport" content=" initial-scale=1.0,user-scalable=no" />
-	<title>无标题文档</title>
+	<title>专家用户注册</title>
 	<link rel="stylesheet" href="<%=basePath%>js/jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.css" />
     <script src="<%=basePath%>js/jquery-1.11.1.min.js"></script>
     <script src="<%=basePath%>js/jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.js"></script>
@@ -22,7 +22,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	</script>
 	<noscript>您的浏览器不支持JavaScript,请使用其它浏览器</noscript>
 	<script type="text/javascript" src="regist_validate.js"></script>
-	
 </head>
 
 <body>
@@ -32,7 +31,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   	</div>
     
     <div data-role="content">
-		<form method="post" action="<%=basePath %>/login/user_expertRegister.action">
+		<form method="post" action="<%=basePath%>login/user_expertRegister.action">
 			<div data-role="fieldcontain">
         		<label for="UserName">用户名:</label>
         		<input type="text" name="expert.eusername" id="UserName" value="" placeholder="仅包括数字、字母或下划线" />
@@ -135,6 +134,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					alert("入行年份格式不合法，请输入0-100之间的数");
 				}
 			});
+			$("#UserName").blur(function(e) {
+				var name = $(this).val();
+	            $.post("../login/user_exist.action", {username:name},function(data,status) {
+					alert(data);
+			});
+        });
 	</script>
 	
 </body>

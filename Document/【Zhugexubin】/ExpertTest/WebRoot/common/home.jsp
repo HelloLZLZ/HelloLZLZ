@@ -46,7 +46,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
       		<ul>
         		<li><a href="<%=basePath%>common/home.jsp" rel="external" data-icon="home" class="ui-btn-active">首页</a></li>
         		<li><a href="<%=basePath%>common/project.html" rel="external" data-icon="arrow-r">项目</a></li>
-        		<li><a href="<%=basePath%>common/center_expert.html" rel="external" data-icon="star">个人</a></li>
+        		<li><a href="<%=basePath%>expert/center_expert.jsp" rel="external" data-icon="star">个人</a></li>
       		</ul>
     	</div>
   	</div>

@@ -16,8 +16,8 @@ public class LoginServiceBean implements LoginService{
 	
 	public boolean hasUser(String name) {
 		// TODO Auto-generated method stub
-		
-		return false;
+		User user = getUserFromName(name);
+		return user != null;
 	}
 
 	public boolean checkUserLogin(User user) {
@@ -99,7 +99,7 @@ public class LoginServiceBean implements LoginService{
 	}
 	public int register(User user) {
 		// TODO Auto-generated method stub
-		int result = 0; // 0--Ê§°Ü¯¯, 1--ÓÃ»§ÃûÒÑ´æÔÚ, 2--×¢²á³É¹¦
+		int result = 0; // 0--Ê§ï¿½Ü¯ï¿½, 1--ï¿½Ã»ï¿½ï¿½ï¿½ï¿½Ñ´ï¿½ï¿½ï¿½, 2--×¢ï¿½ï¿½É¹ï¿½
 		if(getUserFromName(user.getUsername()) != null){
 			result = 1;
 		}
@@ -120,10 +120,10 @@ public class LoginServiceBean implements LoginService{
 	public int expertRegister(Expert expert) {
 		// TODO Auto-generated method stub
 		System.out.println("expertReigsreter------------");
-		int result = 0; // 0--Ê§°Ü¯¯, 1--ÓÃ»§ÃûÒÑ´æÔÚ, 2--×¢²á³É¹¦
+		int result = 0; // 0--Ê§ï¿½Ü¯ï¿½, 1--ï¿½Ã»ï¿½ï¿½ï¿½ï¿½Ñ´ï¿½ï¿½ï¿½, 2--×¢ï¿½ï¿½É¹ï¿½
 		if(getExpertFromName(expert.getEusername()) != null){
 			result = 1;
-			System.out.println("ÓÃ»§ÃûÒÑ´æÔÚ£¡£¡£¡");
+			System.out.println("ï¿½Ã»ï¿½ï¿½ï¿½ï¿½Ñ´ï¿½ï¿½Ú£ï¿½ï¿½ï¿½ï¿½ï¿½");
 		} else{
 			try{
 				Session session = HibernateUtils.getSessionFactory().getCurrentSession();
@@ -142,7 +142,7 @@ public class LoginServiceBean implements LoginService{
 	public int businessRegister(Business business) {
 		// TODO Auto-generated method stub
 		System.out.println("businessReigsreter------------");
-		int result = 0; // 0--Ê§°Ü¯¯, 1--ÓÃ»§ÃûÒÑ´æÔÚ, 2--×¢²á³É¹¦
+		int result = 0; // 0--Ê§ï¿½Ü¯ï¿½, 1--ï¿½Ã»ï¿½ï¿½ï¿½ï¿½Ñ´ï¿½ï¿½ï¿½, 2--×¢ï¿½ï¿½É¹ï¿½
 		if(getBusinessFromName(business.getBusername()) != null){
 			result = 1;
 		}

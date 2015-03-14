@@ -15,15 +15,15 @@ import org.expert.service.impl.LoginServiceBean;
 
 
 /*
- * 1.Struts2直接使用Action来封装HTTP请求参数，因此Action类应该包含与请求相对应的属�?，并为该属�?提供对应的setter和getter方法�?
- * 2.为Action类里增加�?��execute方法，因为Struts2框架默认会执行这个方法�?这个方法本身并不做业务�?辑处理，而是调用其他业务逻辑组件完成这部分工作�? 
- * 3.Action类返回一个标准的字符串，该字符串是一个�?辑视图名，该视图名对应实际的物理视图�?
+ * 1.Struts2鐩存帴浣跨敤Action鏉ュ皝瑁匟TTP璇锋眰鍙傛暟锛屽洜姝ction绫诲簲璇ュ寘鍚笌璇锋眰鐩稿搴旂殑灞炴?锛屽苟涓鸿灞炴?鎻愪緵瀵瑰簲鐨剆etter鍜実etter鏂规硶銆?
+ * 2.涓篈ction绫婚噷澧炲姞涓?釜execute鏂规硶锛屽洜涓篠truts2妗嗘灦榛樿浼氭墽琛岃繖涓柟娉曘?杩欎釜鏂规硶鏈韩骞朵笉鍋氫笟鍔￠?杈戝鐞嗭紝鑰屾槸璋冪敤鍏朵粬涓氬姟閫昏緫缁勪欢瀹屾垚杩欓儴鍒嗗伐浣溿? 
+ * 3.Action绫昏繑鍥炰竴涓爣鍑嗙殑瀛楃涓诧紝璇ュ瓧绗︿覆鏄竴涓?杈戣鍥惧悕锛岃瑙嗗浘鍚嶅搴斿疄闄呯殑鐗╃悊瑙嗗浘銆?
  * 
- * Action的特点：
- * •Struts2框架中Action是一个POJO，没有被代码污染�?
- * •Struts2中的Action的execute方法不依赖于servlet API，改善了Struts1中�?合过于紧密，极大方便了单元测试�? 
- * •Struts2的Action无须用ActionForm封装请求参数�?
- * •相对Struts1框架而言，Struts2的�?辑视图不再是ActionForward对象，�?是一个普通的字符串，利于分离和复用�? 
+ * Action鐨勭壒鐐癸細
+ * 鈥truts2妗嗘灦涓瑼ction鏄竴涓狿OJO锛屾病鏈夎浠ｇ爜姹℃煋銆?
+ * 鈥truts2涓殑Action鐨別xecute鏂规硶涓嶄緷璧栦簬servlet API锛屾敼鍠勪簡Struts1涓?鍚堣繃浜庣揣瀵嗭紝鏋佸ぇ鏂逛究浜嗗崟鍏冩祴璇曘? 
+ * 鈥truts2鐨凙ction鏃犻』鐢ˋctionForm灏佽璇锋眰鍙傛暟銆?
+ * 鈥㈢浉瀵筍truts1妗嗘灦鑰岃█锛孲truts2鐨勯?杈戣鍥句笉鍐嶆槸ActionForward瀵硅薄锛岃?鏄竴涓櫘閫氱殑瀛楃涓诧紝鍒╀簬鍒嗙鍜屽鐢ㄣ? 
  */
 import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
@@ -97,21 +97,25 @@ public class LoginAction extends ActionSupport {
 	}
 	
 	public String exist() throws Exception{
-		//loginService = new LoginServiceBean();
-		boolean boo = loginService.hasUser(user.getUsername());
+		loginService = new LoginServiceBean();
+		String uname = ServletActionContext.getRequest().getParameter("username");
+		boolean boo = loginService.hasUser(uname);
+		System.out.println("++++++++++++"+uname);
 		//获取原始的PrintWriter对象,以便输出响应结果,而不用跳转到某个试图    
 		HttpServletResponse response = ServletActionContext.getResponse();    
-		//设置字符�?   
+		//设置字符集    
 		response.setCharacterEncoding("UTF-8");    
 		PrintWriter out = response.getWriter();    
 		if(boo){	     
-	        //直接输入响应的内�?   
+	        //直接输入响应的内容    
 	        out.println("用户名已存在");    
-	       
 	        out.flush();    
 	        out.close();    
 		}
-		out.println("用户名可�?"); 
+		out.println("用户名可用"); 
+		out.flush();
+		out.close();
+		
 		return null;
 	}
 	
