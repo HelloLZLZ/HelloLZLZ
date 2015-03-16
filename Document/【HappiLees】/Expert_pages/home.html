@@ -1,5 +1,6 @@
 <!doctype html>
-<html><head>
+<html>
+<head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="viewport" content=" initial-scale=1.0,user-scalable=no" />
 	<title>专家汇</title>
@@ -14,7 +15,7 @@
 <body>
 <div data-role="page" id="page">
     <div class="header" data-role="none">
-    	<h1>首页</h1>
+    	<p>首页</p>
     </div>    
 
     <div data-role="content">
@@ -41,7 +42,7 @@
     	<div data-role="navbar">
       		<ul>
         		<li><a href="home.html" rel="external" data-icon="home" class="ui-btn-active">首页</a></li>
-        		<li><a href="project.html" rel="external" data-icon="arrow-r">项目</a></li>
+        		<li class="btn_project"><a href="project_company.html" rel="external" data-icon="arrow-r">项目</a></li>
         		<li><a href="center_expert.html" rel="external" data-icon="star">个人</a></li>
       		</ul>
     	</div>
@@ -49,6 +50,12 @@
 </div>
 <script type="text/javascript">
 	$(".btn_business").click(function() {
+		var code = $(this).attr("data-code");
+		//将行业id传给对应的servlet，并在servlet中通过id在数据库查找行业项目之后，跳转到business_project.jsp进行显示
+		window.location.href = "xxxServlet?business="+code;		
+	});
+	
+	$(".btn_project").click(function() {
 		var code = $(this).attr("data-code");
 		//将行业id传给对应的servlet，并在servlet中通过id在数据库查找行业项目之后，跳转到business_project.jsp进行显示
 		window.location.href = "xxxServlet?business="+code;		
