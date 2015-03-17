@@ -6,10 +6,8 @@ import org.expert.model.User;
 
 public interface LoginService {
 	
-	boolean hasExpertUser(String name);
-	
-	boolean hasBusinessUser(String name);
-	
+	boolean hasUser(String name);
+
 	boolean checkUserLogin(User user);
 	
 	boolean checkExpertLogin(Expert expert);

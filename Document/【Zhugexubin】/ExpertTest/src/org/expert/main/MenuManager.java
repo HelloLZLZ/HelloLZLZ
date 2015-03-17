@@ -5,50 +5,64 @@ import org.expert.pojo.Button;
 import org.expert.pojo.CommonButton;
 import org.expert.pojo.ComplexButton;
 import org.expert.pojo.Menu;
-import org.expert.pojo.ViewButton;
 import org.expert.util.WechatUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
  /**
-  * èœå•ç®¡ç†ç±»
+  * ²Ëµ¥¹ÜÀíÀà
   * @author Seth
   *
   */
 
 
 public class MenuManager {
-	private static Logger log = LoggerFactory.getLogger(MenuManager.class);
+	private static Logger log = LoggerFactory.getLogger(MenuManager.class); 
 	
+
 	public static void main(String[] args) {
-		//ç¬¬ä¸‰æ–¹ç”¨æˆ·å”¯ä¸€å‡­è¯
+		//µÚÈı·½ÓÃ»§Î¨Ò»Æ¾Ö¤
 		String appId="wxebafdf9647c9cbbb";
-		//ç¬¬ä¸‰æ–¹ç”¨æˆ·å”¯ä¸€å‡­è¯å¯†é’¥
+		//µÚÈı·½ÓÃ»§Î¨Ò»Æ¾Ö¤ÃÜÔ¿
 		String appSecret="41bec8f05dc1972b2e6f19c5e2e9b80f";
 		
-		//è°ƒç”¨å€Ÿå£è·å–access_token
+		//µ÷ÓÃ½è¿Ú»ñÈ¡access_token
 		AccessToken at = WechatUtil.getAccessToken(appId, appSecret);
 		
 		if (null!= at){
-			//è°ƒç”¨å€Ÿå£åˆ›å»ºèœå•
+			//µ÷ÓÃ½è¿Ú´´½¨²Ëµ¥
 			int result = WechatUtil.createMenu(getMenu(), at.getToken());
 			
-			//åˆ¤æ–­èœå•åˆ›å»ºç»“æœ
+			//ÅĞ¶Ï²Ëµ¥´´½¨½á¹û
 			if (0 == result)
-				log.info("èœå•åˆ›å»ºæˆåŠŸ");
+				log.info("²Ëµ¥´´½¨³É¹¦");
 			else 
-				log.info("èœå•åˆ›å»ºå¤±è´¥ï¼Œé”™è¯¯ç ï¼š"+result);
+				log.info("²Ëµ¥´´½¨Ê§°Ü£¬´íÎóÂë£º"+result);
 			
 		}
 		
 	}
 	
 	/**
-	 * ç»„è£…èœå•æ•°æ®
+	 * ×é×°²Ëµ¥Êı¾İ
 	 * 
 	 * @return
 	 */
 	private static Menu getMenu(){
+		CommonButton btn11 = new CommonButton();  
+        btn11.setName("11");  
+        btn11.setType("click");  
+        btn11.setKey("11");  
+  
+        CommonButton btn12 = new CommonButton();  
+        btn12.setName("12");  
+        btn12.setType("click");  
+        btn12.setKey("12");  
+  
+        CommonButton btn13 = new CommonButton();  
+        btn13.setName("13");  
+        btn13.setType("click");  
+        btn13.setKey("13");   
   
         CommonButton btn21 = new CommonButton();  
         btn21.setName("21");  
@@ -67,32 +81,31 @@ public class MenuManager {
  
   
         CommonButton btn31 = new CommonButton();  
-        btn31.setName("è”ç³»æˆ‘ä»¬");  
+        btn31.setName("31");  
         btn31.setType("click");  
         btn31.setKey("31");  
   
         CommonButton btn32 = new CommonButton();  
-        btn32.setName("åé¦ˆ");  
+        btn32.setName("32");  
         btn32.setType("click");  
         btn32.setKey("32");  
   
-        ViewButton btn33 = new ViewButton();
-        btn33.setName("å…³äºæˆ‘ä»¬");
-        btn33.setType("view");
-        btn33.setUrl("http://myexpert.nat123.net/ExpertTest/loginPage/login.jsp");
+        CommonButton btn33 = new CommonButton();  
+        btn33.setName("33");  
+        btn33.setType("click");  
+        btn33.setKey("33");  
   
-        ViewButton mainBtn1 = new ViewButton();
-        mainBtn1.setName("é¦–é¡µ");
-        mainBtn1.setType("view");
-        mainBtn1.setUrl("http://myexpert.nat123.net/ExpertTest/loginPage/login.jsp"); 
+        ComplexButton mainBtn1 = new ComplexButton();  
+        mainBtn1.setName("1");  
+        mainBtn1.setSub_button(new CommonButton[] { btn11, btn12, btn13});  
   
         ComplexButton mainBtn2 = new ComplexButton();  
-        mainBtn2.setName("æˆ‘çš„ä¸“å®¶æ±‡");  
-        mainBtn2.setSub_button(new Button[] { btn21, btn22, btn23 });  
+        mainBtn2.setName("2");  
+        mainBtn2.setSub_button(new CommonButton[] { btn21, btn22, btn23 });  
   
         ComplexButton mainBtn3 = new ComplexButton();  
-        mainBtn3.setName("æ›´å¤š");  
-        mainBtn3.setSub_button(new Button[] { btn31, btn32, btn33 });  
+        mainBtn3.setName("3");  
+        mainBtn3.setSub_button(new CommonButton[] { btn31, btn32, btn33 });  
   
   
         Menu menu = new Menu();  

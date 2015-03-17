@@ -22,10 +22,9 @@ public class Project implements java.io.Serializable {
 	}
 
 	/** minimal constructor */
-	public Project(Business business, String pname, Integer schedule) {
+	public Project(Business business, Expert expert) {
 		this.business = business;
-		this.pname = pname;
-		this.schedule = schedule;
+		this.expert = expert;
 	}
 
 	/** full constructor */

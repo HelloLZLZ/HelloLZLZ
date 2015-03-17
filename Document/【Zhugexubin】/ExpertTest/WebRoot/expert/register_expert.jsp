@@ -9,7 +9,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="viewport" content=" initial-scale=1.0,user-scalable=no" />
 	<title>专家用户注册</title>
-	<link rel="stylesheet" href="<%=basePath%>css/theme.css"/>
 	<link rel="stylesheet" href="<%=basePath%>js/jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.css" />
     <script src="<%=basePath%>js/jquery-1.11.1.min.js"></script>
     <script src="<%=basePath%>js/jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.js"></script>
@@ -22,12 +21,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		localStorage.setItem("location_register",str);
 	</script>
 	<noscript>您的浏览器不支持JavaScript,请使用其它浏览器</noscript>
-	<script type="text/javascript" src="<%=basePath %>js/regist_validate.js"></script>
+	<script type="text/javascript" src="regist_validate.js"></script>
 </head>
 
 <body>
 <div data-role="page" id="basicinfo_expert">
-	<div class="header" data-role="none">   
+	<div data-role="header" data-theme="b">
     	<h1>专家注册</h1>
   	</div>
     
@@ -137,7 +136,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			});
 			$("#UserName").blur(function(e) {
 				var name = $(this).val();
-	            $.post("../login/user_expertExist.action", {username:name},function(data,status) {
+	            $.post("../login/user_exist.action", {username:name},function(data,status) {
 					alert(data);
 			});
         });

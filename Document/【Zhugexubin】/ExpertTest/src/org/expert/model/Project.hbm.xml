@@ -14,16 +14,16 @@
             <column name="bid" not-null="true" />
         </many-to-one>
         <many-to-one name="expert" class="org.expert.model.Expert" fetch="select">
-            <column name="eid" />
+            <column name="eid" not-null="true" />
         </many-to-one>
         <property name="pname" type="java.lang.String">
-            <column name="pname" length="50" not-null="true" />
+            <column name="pname" length="50" />
         </property>
         <property name="pdescrpt" type="java.lang.String">
             <column name="pdescrpt" length="500" />
         </property>
         <property name="schedule" type="java.lang.Integer">
-            <column name="schedule" not-null="true" />
+            <column name="schedule" />
         </property>
     </class>
 </hibernate-mapping>

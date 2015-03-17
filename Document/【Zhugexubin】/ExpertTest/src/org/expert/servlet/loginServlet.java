@@ -2,8 +2,6 @@ package org.expert.servlet;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 import javax.servlet.ServletException;
@@ -11,7 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-public class expert_center extends HttpServlet {
+public class loginServlet extends HttpServlet {
 
 	/**
 	 * The doGet method of the servlet. <br>
@@ -25,7 +23,6 @@ public class expert_center extends HttpServlet {
 	 */
 	public void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-
 		doPost(request, response);
 	}
 
@@ -41,19 +38,25 @@ public class expert_center extends HttpServlet {
 	 */
 	public void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+
 		response.setContentType("text/html;charset=utf-8");
 		request.setCharacterEncoding("utf-8");
 		PrintWriter out = response.getWriter();
 		
-		String[] profile = request.getParameterValues("profile");
-		//List list = Arrays.asList(profile);
+		String uname = request.getParameter("login_usernameinput");
+		String password = request.getParameter("login_passwordinput");
+
+		System.out.println("uname =" + uname + ", password =" + password);
+	
+		if(uname.equals("zhuge")&&password.equals("zhuge")){
+			response.sendRedirect("loginPage/register.jsp");
+		}else{
+			out.print("<html><body>µÇÂ¼Ê§°Ü£¡</body></html>");
+		}
 		
-		//System.out.println("profile =" + profile[0] + ", password =" + profile[1]);
-		
-		//request.getRequestDispatcher("../loginPage/register.jsp").rward(request, response);
+		//request.getRequestDispatcher("../loginPage/register.jsp").forward(request, response);
 		out.flush();
 		out.close();
-		 
 	}
 
 }

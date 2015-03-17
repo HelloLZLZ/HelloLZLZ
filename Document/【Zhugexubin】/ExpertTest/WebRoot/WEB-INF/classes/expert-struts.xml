@@ -8,15 +8,16 @@
 		<global-results>
 			<result name="error" type="redirect">/resultPage/login_fail.jsp</result>
 		</global-results>
-
-       <action name="expert_*" class="org.expert.action.ExpertAction" method="{1}">
-            <result type="redirect">/resultPage/existingname.jsp</result>
-            <result name="save_success">/expert/center_expert.jsp</result>
-          	<result name="init_success">/expert/center_expert.jsp</result>
-          
-          	<result name="enter_success" type="dispatcher">/expert/center_expert_profile.jsp</result>
-          	<result name="enter_photo_success" type="dispatcher">/expert/center_expert_photo.jsp</result>
-        </action>  
+        <action name="expert_*" class="org.expert.action.LoginAction" method="{1}">
+       	 	<result name="input">/login.jsp</result>
+            <result name="login_success" type="redirect">/loginPage/register.jsp</result>
+            <result name="expert_login_success" type="redirect">/common/home.jsp</result>
+            <result name="business_login_success" type="redirect">/common/home.jsp</result>
+            <result name="register_success">/loginPage/login.jsp</result>
+            <result name="uname_exist">/resultPage/existingname.jsp</result>
+            <result name="logout_success" type="redirect">/login.jsp</result>
+            <result name="not-login" type="redirect">/loginPage/login.jsp</result>
+        </action>
  
     </package>
 </struts>
