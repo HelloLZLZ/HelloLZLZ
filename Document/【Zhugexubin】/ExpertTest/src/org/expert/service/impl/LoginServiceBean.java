@@ -14,12 +14,18 @@ import org.hibernate.SessionFactory;
 public class LoginServiceBean implements LoginService{
 
 	
-	public boolean hasUser(String name) {
+	public boolean hasExpertUser(String name) {
 		// TODO Auto-generated method stub
-		User user = getUserFromName(name);
+		Expert user = getExpertFromName(name);
 		return user != null;
 	}
-
+	
+	public boolean hasBusinessUser(String name) {
+		// TODO Auto-generated method stub
+		Business user = getBusinessFromName(name);
+		return user != null;
+	}
+	
 	public boolean checkUserLogin(User user) {
 		// TODO Auto-generated method stub
 		User usertmp = getUserFromName(user.getUsername()); //-- get user from username

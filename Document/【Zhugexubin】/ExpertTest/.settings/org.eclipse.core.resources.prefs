@@ -1,6 +1,7 @@
-#Wed Mar 11 20:24:27 CST 2015
+#Mon Mar 16 22:45:29 CST 2015
 eclipse.preferences.version=1
+encoding//WebRoot/ForTest/center_expert.jsp=UTF-8
 encoding//WebRoot/business/register_business.jsp=UTF-8
-encoding//WebRoot/expert/center_expert.jsp=UTF-8
 encoding//WebRoot/expert/register_expert.jsp=UTF-8
 encoding//WebRoot/loginPage/register.jsp=UTF-8
+encoding//src/org/expert/action/LoginAction.java=UTF-8

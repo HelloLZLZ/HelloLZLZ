@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<!-- Struts2框架的核心配置文件就是struts.xml，该文件主要负责Struts2应用中各Action的具体实现逻辑。
+	 struts.xml会根据不同请求找到具体的Action，然后根据Action返回的逻辑视图名找到具体的物理视图。
+	    在WEB-INF/classes文件夹下创建struts.xml
+-->
+<struts>
+	<constant name="struts.action.extension" value="action"></constant>
+	
+	<package name="expert-base" extends="struts-default">
+
+		<default-action-ref name="notFound" />
+
+		<action name="notFound">
+			<result >/resultPage/404.jsp</result>
+		</action>
+	</package>
+	<include file="login-struts.xml" />
+	<include file="expert-struts.xml" />
+	<include file="fileupload-struts.xml" />
+</struts>

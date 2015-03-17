@@ -9,7 +9,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content=" initial-scale=1.0,user-scalable=no" />
 	<title>无标题文档</title>
-   <link rel="stylesheet" href="<%=basePath%>js/jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.css" />
+   <link rel="stylesheet" href="<%=basePath%>css/theme.css"/>
+	<link rel="stylesheet" href="<%=basePath%>js/jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.css" />
     <script src="<%=basePath%>js/jquery-1.11.1.min.js"></script>
     <script src="<%=basePath%>js/jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.js"></script>
     <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -18,7 +19,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 </head>
 <body>
 <div data-role="page" id="home">
-   		<div data-role="header" data-theme="b">
+   		<div class="header" data-role="none">
 			<h1>用户认证</h1>
     	</div>
     	<div data-role="content">	

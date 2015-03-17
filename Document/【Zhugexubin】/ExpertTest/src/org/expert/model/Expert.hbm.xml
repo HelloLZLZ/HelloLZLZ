@@ -31,6 +31,21 @@
         <property name="eyears" type="java.lang.Integer">
             <column name="eyears" />
         </property>
+        <property name="photo" type="java.lang.String">
+            <column name="photo" length="45" />
+        </property>
+        <property name="profile" type="java.lang.String">
+            <column name="profile" />
+        </property>
+        <property name="education" type="java.lang.String">
+            <column name="education" length="45" />
+        </property>
+        <property name="interest" type="java.lang.Integer">
+            <column name="interest" />
+        </property>
+        <property name="privacy" type="java.lang.Integer">
+            <column name="privacy" />
+        </property>
         <set name="projects" inverse="true">
             <key>
                 <column name="eid" not-null="true" />
