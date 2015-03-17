@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="org.expert.pojo">
+
+	<class name="Profile" table="t_profile">
+		<id name="username" column="eusername" type="string" >
+		   <generator class="assigned"/> 
+		</id>
+		<property name="picUrl" type="string" >
+		   <column name="picurl"/>
+		</property>
+		<property name="intro" type="string" >
+		   <column name="intro"/>
+		</property>	
+		<property name="education" type="string" >
+		   <column name="edu"/>
+		</property>	
+		<property name="careerExp" type="string">
+		   <column name="wexp"/>
+		</property>
+		<property name="fileUrl" type="string" >
+		   <column name="fileurl"/>
+		</property>
+		<property name="interests" type="string" >
+		   <column name="interests"/>
+		</property>
+	
+		
+	</class>
+</hibernate-mapping>
