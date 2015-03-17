@@ -9,6 +9,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="viewport" content=" initial-scale=1.0,user-scalable=no" />
 	<title>登录</title>
+ 	<link rel="stylesheet" href="<%=basePath%>css/theme.css"/>
     <link rel="stylesheet" href="<%=basePath%>js/jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.css" />
     <script src="<%=basePath%>js/jquery-1.11.1.min.js"></script>
     <script src="<%=basePath%>js/jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.js"></script>
@@ -20,7 +21,7 @@
 <body>
 <div data-role="page" id="page">
   
-  <div data-role="header">
+  <div class="header" data-role="none">
     <h1>登录</h1>
   </div>
   
