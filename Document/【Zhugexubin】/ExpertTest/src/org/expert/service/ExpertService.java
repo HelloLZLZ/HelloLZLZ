@@ -8,7 +8,7 @@ public interface ExpertService {
 	
 	public boolean save(Expert expert);
 
-	public void update(Expert expert);
+	public boolean update(Expert expert);
 
 	public void delete(int id);
 

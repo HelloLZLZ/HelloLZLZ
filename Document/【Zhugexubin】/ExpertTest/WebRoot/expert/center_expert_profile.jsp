@@ -32,20 +32,8 @@
   <div class="header" data-role="none">
     <h1>个人资料</h1>
   </div>
-  <form action="<%=basePath %>expert/expert_saveProfile.action" method="post">
   <div data-role="content">
     <ul data-role="listview" data-inset="true">
-   		<%
-			ActionContext ctx = ActionContext.getContext();
-			String userid = String.valueOf((ctx.getSession().get("euserid")));
-			String username = String.valueOf(ctx.getSession().get("eusername"));
-			String pwd = String.valueOf(ctx.getSession().get("epwd"));
-		%>									
-		<input type="hidden" name="expert.eid" value="<%=userid%>">
-		<input type="hidden" name="expert.eusername" value="<%=username%>">	
-		<input type="hidden" name="expert.epwd" value="<%=pwd%>">	
-    
-      <input type="hidden" name="expert.photo" value="${expert.photo}">
       <li><a class="toInput" href="#page2" data-rel="dialog">
         <h3>真实姓名</h3>
         <p id="profile_name" name="expert.name">${expert.name}</p>
@@ -85,12 +73,10 @@
         <p profile_private>???</p>
       </a></li>
     </ul>
-    <input type="submit" value="提交">
-    <!--  <a id="submit" href="#" data-role="button">提交</a>-->
+    <a id="submit" href="#" data-role="button">提交</a>
         
   </div>
 </div>
-</form>
 <div data-role="page" id="page2">
   <div class="header" data-role="none">
     <h1 class="textheader">标题</h1>
@@ -326,20 +312,30 @@
         $('.ui-dialog').dialog('close'); 
 		return false;
     });
-	/*
+	
 	$("#submit").click(function(e) {
 		var name = $("#profile_name").text();
 		var phone = $("#profile_phone").text();
+		var business = $("#BusinessSelect").val();
+		var job = $("#JobSelect").val();
 		var year = $("#profile_year").text();
 		var introduction = $("#profile_introduction").text();
 		var education = $("#profile_education").text();
-		var profile=new Array(name,phone,business,job,year,introduction,education,project,private);
-		$("#submit").click(function(){
-    		$.post("../expert_center",profile,function(data,status){
-      			alert("提交成功！");
-    		});
-  		});
-    });*/
+		alert(name+","+phone+","+business+","+job+","+year+","+introduction+","+education)
+		var profile= {
+			"name":name,
+			"phone":phone,
+			"business":business,
+			"job":job,
+			"years":year,
+			"introduction":introduction,
+			"education":education,
+		};
+	
+    	$.post("../expert/expert_saveProfile.action",profile,function(data,status){
+      		alert(data);
+    	});
+    });
 </script>
 </body>
 </html>

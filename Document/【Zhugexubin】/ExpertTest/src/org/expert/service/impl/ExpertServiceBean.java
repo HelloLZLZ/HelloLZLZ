@@ -27,7 +27,7 @@ public class ExpertServiceBean implements ExpertService{
 		return false;
 	}
 
-	public void update(Expert expert) {
+	public boolean update(Expert expert) {
 		// TODO Auto-generated method stub
 		try{
 			Session session = HibernateUtils.getSessionFactory().getCurrentSession();
@@ -35,9 +35,11 @@ public class ExpertServiceBean implements ExpertService{
 			session.merge(expert);
 			//session.update(expert);  // ??? ---different from merge?
 			session.getTransaction().commit();
+			return true;
 		} catch(RuntimeException e){
 			HibernateUtils.getSessionFactory().getCurrentSession().getTransaction().rollback();
 			e.printStackTrace();
+			return false;
 		}
 	}
 

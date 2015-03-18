@@ -45,10 +45,10 @@ public class expert_center extends HttpServlet {
 		request.setCharacterEncoding("utf-8");
 		PrintWriter out = response.getWriter();
 		
-		String[] profile = request.getParameterValues("profile");
+		String name = request.getParameter("name");
 		//List list = Arrays.asList(profile);
 		
-		//System.out.println("profile =" + profile[0] + ", password =" + profile[1]);
+		System.out.println("========name =" + name);
 		
 		//request.getRequestDispatcher("../loginPage/register.jsp").rward(request, response);
 		out.flush();

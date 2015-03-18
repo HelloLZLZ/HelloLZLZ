@@ -22,7 +22,7 @@ import com.opensymphony.xwork2.ModelDriven;
 public class LoginAction extends ActionSupport {
 	
 	/**
-	 * 
+	 * Author: zhugexubin
 	 */
 	private static final long serialVersionUID = 1L;
 	private User user = new User();

@@ -13,7 +13,8 @@
             <result type="redirect">/resultPage/existingname.jsp</result>
             <result name="save_success">/expert/center_expert.jsp</result>
           	<result name="init_success">/expert/center_expert.jsp</result>
-          
+          	
+            <result name="save_photo_success" type="redirect">/expert/center_expert_profile.jsp</result>
           	<result name="enter_success" type="dispatcher">/expert/center_expert_profile.jsp</result>
           	<result name="enter_photo_success" type="dispatcher">/expert/center_expert_photo.jsp</result>
         </action>  

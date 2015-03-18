@@ -1,4 +1,5 @@
 <%@ page contentType="text/html; charset=utf-8" language="java" import="java.sql.*" errorPage="" %>
+<%@taglib uri="/struts-tags" prefix="s"%>
 <%
 	String path = request.getContextPath();
 	String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
@@ -7,6 +8,7 @@
 //从servlet获取项目数据
 	//ArrayList list = (ArrayList)request.getAttribute("xxx");
 %>	
+
 <!doctype html>
 <html>
 <head>
@@ -35,7 +37,12 @@
   	<div class="expert-item" data-id="???">
     	<div class="expert-portait">
     	<img id="frontimg" width="200px" height="200px"
-			src="../resource/UploadImages/${expert.photo}" />
+    		src=<s:if test="expert==null || expert.photo==null || expert.photo==''">
+				"../resource/img/default.jpg"
+				</s:if>
+				<s:else>
+				"../resource/UploadImages/${expert.photo}"
+				</s:else> />
     	</div>        
         <div class="expert-body">
         	<div class="expert-line name">${expert.name}</div>

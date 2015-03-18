@@ -61,32 +61,10 @@
 	</div>
 	<iframe id="hidden_frame" name="hidden_frame" style="display: none"></iframe>
 	</form>
-	<form method="post" action="<%=basePath %>expert/expert_saveProfile.action">
-		<input type="hidden" id="front" name="expert.photo" value="${expert.photo}">
-		<input type="hidden" name="expert.name" value="${expert.name}">
-		<input type="hidden" name="expert.phone" value="${expert.phone}">
-		<input type="hidden" name="expert.evocation" value="${expert.evocation}">
-		<input type="hidden" name="expert.edomain" value="${expert.edomain}">
-		<input type="hidden" name="expert.eyears" value="${expert.eyears}">
-		<input type="hidden" name="expert.profile" value="${expert.profile}">
-		<input type="hidden" name="expert.education" value="${expert.education}">
-		<input type="hidden" name="expert.interest" value="${expert.interest}">
-		<input type="hidden" name="expert.privacy" value="${expert.privacy}">
 	
-		<%
-			ActionContext ctx = ActionContext.getContext();
-			String userid = String.valueOf((ctx.getSession().get("euserid")));
-			String username = String.valueOf(ctx.getSession().get("eusername"));
-			String pwd = String.valueOf(ctx.getSession().get("epwd"));
-		%>									
-		<input type="hidden" name="expert.eid" value="<%=userid%>">
-		<input type="hidden" name="expert.eusername" value="<%=username%>">	
-		<input type="hidden" name="expert.epwd" value="<%=pwd%>">	
+	<input type="hidden" id="front" name="expert.photo" value="${expert.photo}">
+	<input id="submit" type="submit" value="确认修改">
 		
-		
-		
-		<input type="submit" value="确认修改">
-	</form>
 	<div data-role="footer" data-position="fixed">
     	<div data-role="navbar">
       		<ul>
@@ -98,5 +76,16 @@
   	</div>
   </div>      
 </div>
+
+<script type="text/javascript">
+    $("#submit").click(function(){
+    	var imgName = $("#front").val();
+    	alert(imgName);
+   		$.post("../expert/expert_savePhoto.action",{imgName:imgName},function(data,status){
+     		alert(data);
+   		});
+  	});
+</script>
+
 </body>
 </html>
