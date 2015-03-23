@@ -3,11 +3,7 @@
 <%
 	String path = request.getContextPath();
 	String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
-%>	
-<%
-//从servlet获取项目数据
-	//ArrayList list = (ArrayList)request.getAttribute("xxx");
-%>	
+%>		
 
 <!doctype html>
 <html>
@@ -62,9 +58,9 @@
   	<div data-role="footer" data-position="fixed">
     	<div data-role="navbar">
       		<ul>
-        		<li><a href="<%=basePath%>expert/expert_home.jsp" rel="external" data-icon="home" class="ui-btn-active">首页</a></li>
+        		<li><a href="<%=basePath%>expert/expert_home.jsp" rel="external" data-icon="home">首页</a></li>
         		<li><a href="<%=basePath%>common/project.html" rel="external" data-icon="arrow-r">项目</a></li>
-        		<li><a href="<%=basePath%>expert/expert_initProfile.action" rel="external" data-icon="star">个人中心</a></li>
+        		<li><a href="<%=basePath%>expert/expert_initProfile.action" rel="external" data-icon="star" class="ui-btn-active">个人中心</a></li>
       		</ul>
     	</div>
   	</div>
@@ -75,8 +71,10 @@
         window.location.href = "<%=basePath%>expert/expert_enterPhoto.action";
     });
 	$(".profile").click(function(e) {
-        var project_id = $(this).attr("data-id");
 		window.location.href = "<%=basePath%>expert/expert_enterProfile.action";
+    });
+    $(".changepassword").click(function(e) {
+		window.location.href = "<%=basePath%>expert/expert_modifyPwd.jsp";
     });
 </script>
 </body>

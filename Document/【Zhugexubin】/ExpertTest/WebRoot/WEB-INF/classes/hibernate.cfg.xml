@@ -32,6 +32,10 @@
 		<mapping resource="org/expert/model/Project.hbm.xml" />
 		<mapping resource="org/expert/model/Admin.hbm.xml" />
 		<mapping resource="org/expert/model/Business.hbm.xml" />
+		<mapping resource="org/expert/model/Vocation.hbm.xml" />
+		<mapping resource="org/expert/model/Domain.hbm.xml" />
+		<mapping resource="org/expert/model/Budget.hbm.xml" />
+		<mapping resource="org/expert/model/Privacy.hbm.xml" />
 
 	</session-factory>
 

@@ -24,6 +24,7 @@ public class Expert implements java.io.Serializable {
 	private String education;
 	private Integer interest;
 	private Integer privacy;
+	private String email;
 	private Set projects = new HashSet(0);
 
 	// Constructors
@@ -42,7 +43,7 @@ public class Expert implements java.io.Serializable {
 	public Expert(String eusername, String epwd, String name, String phone,
 			Integer evocation, Integer edomain, Integer eyears, String photo,
 			String profile, String education, Integer interest,
-			Integer privacy, Set projects) {
+			Integer privacy, String email, Set projects) {
 		this.eusername = eusername;
 		this.epwd = epwd;
 		this.name = name;
@@ -55,6 +56,7 @@ public class Expert implements java.io.Serializable {
 		this.education = education;
 		this.interest = interest;
 		this.privacy = privacy;
+		this.email = email;
 		this.projects = projects;
 	}
 
@@ -164,6 +166,14 @@ public class Expert implements java.io.Serializable {
 		this.privacy = privacy;
 	}
 
+	public String getEmail() {
+		return this.email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
 	public Set getProjects() {
 		return this.projects;
 	}
@@ -171,25 +181,5 @@ public class Expert implements java.io.Serializable {
 	public void setProjects(Set projects) {
 		this.projects = projects;
 	}
-	
-	public String toString(){
-		String result = "name:"+name+";phone:"+phone+";evocation"+evocation+";epwd:"+epwd;
-		return result;	
-	}
 
-	public void copy(Expert target){
-		this.name = target.name;
-		this.phone = target.phone;
-		this.photo = target.photo;
-		this.education = target.education;
-		this.edomain = target.edomain;
-		this.evocation = target.evocation;
-		this.interest = target.interest;
-		this.eyears = target.eyears;
-		this.eusername = target.eusername;
-		this.epwd = target.epwd;
-		this.privacy = target.privacy;
-		this.profile = target.profile;
-		this.projects = target.projects;
-	}
 }

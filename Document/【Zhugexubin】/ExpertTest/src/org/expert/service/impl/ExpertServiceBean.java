@@ -8,7 +8,11 @@ import org.expert.service.ExpertService;
 import org.hibernate.Query;
 import org.hibernate.Session;
 
-
+/**
+ * 
+ * @author zhugexubin
+ *
+ */
 public class ExpertServiceBean implements ExpertService{
 
 	/************ 保存专家用户Profile资料 ******************/
@@ -26,7 +30,7 @@ public class ExpertServiceBean implements ExpertService{
 		}
 		return false;
 	}
-
+	/************ 修改专家用户Profile资料 ******************/
 	public boolean update(Expert expert) {
 		// TODO Auto-generated method stub
 		try{
@@ -42,7 +46,7 @@ public class ExpertServiceBean implements ExpertService{
 			return false;
 		}
 	}
-
+	
 	public void delete(int id) {
 		// TODO Auto-generated method stub
 		try{

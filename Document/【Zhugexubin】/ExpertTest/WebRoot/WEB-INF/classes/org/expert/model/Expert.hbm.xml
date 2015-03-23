@@ -46,9 +46,12 @@
         <property name="privacy" type="java.lang.Integer">
             <column name="privacy" />
         </property>
+        <property name="email" type="java.lang.String">
+            <column name="email" length="45" />
+        </property>
         <set name="projects" inverse="true">
             <key>
-                <column name="eid" not-null="true" />
+                <column name="eid" />
             </key>
             <one-to-many class="org.expert.model.Project" />
         </set>

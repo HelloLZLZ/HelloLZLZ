@@ -1,8 +1,5 @@
 <%@ page language="java" import="java.util.*,com.opensymphony.xwork2.ActionContext" pageEncoding="UTF-8"%>
-<%
-//从servlet获取项目数据
-	//ArrayList list = (ArrayList)request.getAttribute("xxx");
-%>
+<%@taglib uri="/struts-tags" prefix="s"%>
 <%
 	String path = request.getContextPath();
 	String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
@@ -32,6 +29,7 @@
   <div class="header" data-role="none">
     <h1>个人资料</h1>
   </div>
+  
   <div data-role="content">
     <ul data-role="listview" data-inset="true">
       <li><a class="toInput" href="#page2" data-rel="dialog">
@@ -44,15 +42,17 @@
       </a></li>
       <li><a class="toBusiness" href="#page4" data-rel="dialog">
         <h3>所属行业</h3>
-        <p id="profile_business" name="expert.evocation">???</p>
+        <s:set var="businessid" value="expert.evocation"/>
+        <p id="profile_business">${businessList[businessid]}</p>
       </a></li>
       <li><a class="toJob" href="#page5" data-rel="dialog">
         <h3>专长领域</h3>
-        <p id="profile_job" name="expert.edomain">???</p>
+        <s:set var="jobid" value="expert.edomain"/>
+        <p id="profile_job" name="">${jobList[jobid]}</p>
       </a></li>
       <li><a class="toInput" href="#page2" data-rel="dialog">
         <h3>入行年数</h3>
-        <p id="profile_year" name="expert.eyears">${expert.eyears }</p>
+        <p id="profile_year" name="expert.eyears">${expert.eyears}</p>
       </a></li>
       <li><a class="toTextarea" href="#page3" data-rel="dialog">
         <h3>个人简介</h3>
@@ -64,13 +64,15 @@
       </a></li>
       <li><a class="toProject" href="#page6" data-rel="dialog">
         <h3>感兴趣的咨询项目类型</h3>
-        <p id="business">行业：???</p>
-        <p id="job">领域：???</p>
-        <p id="money">项目预算：???</p>
+        <p id="business">行业：${businessList[businessid]}</p>
+        <p id="job">领域：${jobList[jobid]}</p>
+        <s:set var="budgetid" value="expert.interest"/>
+        <p id="money">项目预算：${budgetList[budgetid]}</p>
       </a></li>
       <li><a class="toPrivate" href="#page7" data-rel="dialog">
         <h3>隐私度</h3>
-        <p profile_private>???</p>
+        <s:set var="privacyid" value="expert.privacy"/>
+        <p profile_private>${privacyList[privacyid]}</p>
       </a></li>
     </ul>
     <a id="submit" href="#" data-role="button">提交</a>
@@ -106,7 +108,6 @@
   	<a class="surearea" href="#" data-role="button">确定</a>    
   </div>
 </div>
-
 <div data-role="page" id="page4">
   <div class="header" data-role="none">
     <h1>所属行业</h1>
@@ -115,19 +116,12 @@
     <div data-role="fieldcontain">
     	<label for="BusinessSelect" class="select" class="ui-hidden-accessible">所属行业:</label>
         <select name="BusinessSelectMenu" id="BusinessSelect">
-        	<option id="b_0" value="0">IT|通信|电子|互联网</option>
-            <option id="b_1" value="1">金融业</option>
-            <option id="b_2" value="2">房地产|建筑业</option>
-            <option id="b_3" value="3">商业服务</option>
-            <option id="b_4" value="4">贸易|批发|零售|租赁业</option>
-            <option id="b_5" value="5">文教体育|工业美术</option>
-            <option id="b_6" value="6">生产|加工|制造</option>
-            <option id="b_7" value="7">交通|运输|物流|仓储</option>
-            <option id="b_8" value="8">服务业</option>
-            <option id="b_9" value="9">文化|传媒|娱乐|体育</option>
-            <option id="b_10" value="10">能源|矿产|环保</option>
-            <option id="b_11" value="11">政府|非盈利机构</option>
-            <option id="b_12" value="12">农|林|牧|渔|其他</option>
+        <s:iterator value="businessList" status="i">
+			<option id="b_${i.count-1}" value="${i.count-1}"
+				<s:if test="#i.count-1==expert.evocation">selected="selected"</s:if>>
+				${businessList[i.count-1]}
+			</option>
+		</s:iterator>
         </select>
     </div>  
   </div>
@@ -136,30 +130,25 @@
   </div>
 </div>
 
+
 <div data-role="page" id="page5">
   <div class="header" data-role="none">
     <h1>专长领域</h1>
   </div>
-  <div data-role="content">
+  <div data-role="content" >
   	<div data-role="fieldcontain">
-    	<label for="JobSelect" class="select" class="ui-hidden-accessible">专长领域:</label>
-        <select name="JobSelectMenu" id="JobSelect">
-        	<option id="j_0" value="0">销售|客服|市场</option>
-            <option id="j_1" value="1">财务|人力资源|行政</option>
-            <option id="j_2" value="2">项目|质量|高级管理</option>
-            <option id="j_3" value="3">IT|互联网|通信</option>
-            <option id="j_4" value="4">房产|建筑|物业管理</option>
-            <option id="j_5" value="5">金融</option>
-            <option id="j_6" value="6">采购|贸易|交通|物流</option>
-            <option id="j_7" value="7">生产|制造</option>
-            <option id="j_8" value="8">传媒|印刷|艺术|设计</option>
-            <option id="j_9" value="9">咨询|法律|教育|翻译</option>
-            <option id="j_10" value="10">服务业</option>
-            <option id="j_11" value="11">能源|环保|农业|科研</option>
-            <option id="j_12" value="12">兼职|实习|社工|其他</option>
-        </select>
+    	<label for="JobSelect">专长领域:</label>
+		<select class="combox" id="JobSelect">
+		<s:iterator value="jobList" status="i">
+			<option id="j_${i.count-1}" value="${i.count-1}"
+				<s:if test="#i.count-1==expert.edomain">selected="selected"</s:if>>
+				${jobList[i.count-1]}
+			</option>
+		</s:iterator>
+		</select>
 	</div>
-  </div>
+</div>
+
   <div data-role="footer">
   	<a class="surejob" href="#" data-role="button">确定</a>    
   </div>
@@ -172,27 +161,36 @@
   	<div data-role="fieldcontain">
     	<label for="ProjectBSelect" class="select">行业:</label>
         <select name="ProjectBSelectMenu" id="ProjectBSelect">
-        	<option id="pb_0" value="0">计算机</option>
-            <option id="pb_1" value="1">dd</option>
-            <option id="pb_2" value="2">yyy</option>
+        <s:iterator value="businessList" status="i">
+			<option id="pb_${i.count-1}" value="${i.count-1}"
+				<s:if test="#i.count-1==expert.evocation">selected="selected"</s:if>>
+				${businessList[i.count-1]}
+			</option>
+		</s:iterator>
         </select>
      </div>
      
      <div data-role="fieldcontain">
     	<label for="ProjectJSelect" class="select">领域:</label>
         <select name="ProjectSelectMenu" id="ProjectJSelect">
-        	<option id="pj_0" value="0">计算机</option>
-            <option id="pj_1" value="1">dd</option>
-            <option id="pj_2" value="2">yyy</option>
+        <s:iterator value="jobList" status="i">
+			<option id="pj_${i.count-1}" value="${i.count-1}"
+				<s:if test="#i.count-1==expert.edomain">selected="selected"</s:if>>
+				${jobList[i.count-1]}
+			</option>
+		</s:iterator>
         </select>
      </div>
      
        	<div data-role="fieldcontain">
     	<label for="ProjectMSelect" class="select">项目预算:</label>
         <select name="ProjectMSelectMenu" id="ProjectMSelect">
-        	<option id="pm_0" value="0">0~1000</option>
-            <option id="pm_1" value="1">1000~2000</option>
-            <option id="pm_2" value="2">2000以上</option>
+        <s:iterator value="budgetList" status="i">
+			<option id="pm_${i.count-1}" value="${i.count-1}"
+				<s:if test="#i.count-1==expert.interest">selected="selected"</s:if>>
+				${budgetList[i.count-1]}
+			</option>
+		</s:iterator>
         </select>
      </div>
   </div>
@@ -209,9 +207,12 @@
     <div data-role="fieldcontain">
       <label for="PrivateSelect" class="select" class="ui-hidden-accessible">资料隐私度:</label>
       <select name="PrivateSelectMenu" id="PrivateSelect">
-        <option id="y_0" value="0">公开</option>
-        <option id="y_1" value="1">只公开部分信息</option>
-        <option id="y_2" value="2">完全不公开</option>
+        <s:iterator value="privacyList" status="i">
+			<option id="y_${i.count-1}" value="${i.count-1}"
+				<s:if test="#i.count-1==expert.privacy">selected="selected"</s:if>>
+				${privacyList[i.count-1]}
+			</option>
+		</s:iterator>
       </select>
     </div>
   </div>
@@ -321,6 +322,7 @@
 		var year = $("#profile_year").text();
 		var introduction = $("#profile_introduction").text();
 		var education = $("#profile_education").text();
+		var interest = $("#ProjectMSelect").val();
 		alert(name+","+phone+","+business+","+job+","+year+","+introduction+","+education)
 		var profile= {
 			"name":name,
@@ -330,10 +332,12 @@
 			"years":year,
 			"introduction":introduction,
 			"education":education,
+			"interest":interest 
 		};
 	
     	$.post("../expert/expert_saveProfile.action",profile,function(data,status){
       		alert(data);
+      		location.href="<%=basePath%>expert/expert_initProfile.action";
     	});
     });
 </script>
