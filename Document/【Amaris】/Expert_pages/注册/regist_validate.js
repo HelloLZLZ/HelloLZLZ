@@ -2,7 +2,7 @@
 
 //检验字符串是否只包括字母数字和下划线
 function isNumberOr_Letter(str) {
-	var regu = "^[0-9a-zA-Z\_]+$";
+	var regu = "^[0-9a-zA-Z\_]{1,8}$";
 	var re = new RegExp(regu);
 	return re.test(str);
 }
@@ -53,4 +53,5 @@ function IsURL(str){
     var re=new RegExp(regu); 
     return re.test(str); 
 }
+
 

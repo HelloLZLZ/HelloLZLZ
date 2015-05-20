@@ -153,7 +153,13 @@
 		var deadline = $("#project_deadline").text();
 		var money= $("#project_money").text();
 		var detail = $("#project_detail").text();
-		var project = new Array(name,key, deadline, money, detail);
+		var project = {
+						"truename":name,
+						"key":key, 
+						"deadline":deadline, 
+						"money":money, 
+						"detail":detail
+						};
 		$("#submit").click(function(){
     		$.post("???",project,function(data,status){
       			alert("提交成功！");
