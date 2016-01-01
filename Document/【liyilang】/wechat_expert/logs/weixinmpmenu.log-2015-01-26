@@ -1,9 +1,0 @@
-[ERROR] 2015-01-26 12:49:34,144            org.expert.util.WechatUtil     - 创建菜单失败 errcode:40024 errmsg:invalid sub button type
-  [INFO ] 2015-01-26 12:49:34,148           org.expert.main.MenuManager     - 菜单创建失败，错误码：40024
-  [ERROR] 2015-01-26 12:52:36,733            org.expert.util.WechatUtil     - 创建菜单失败 errcode:40024 errmsg:invalid sub button type
-  [INFO ] 2015-01-26 12:52:36,737           org.expert.main.MenuManager     - 菜单创建失败，错误码：40024
-  [ERROR] 2015-01-26 12:52:49,223            org.expert.util.WechatUtil     - 创建菜单失败 errcode:40024 errmsg:invalid sub button type
-  [INFO ] 2015-01-26 12:52:49,227           org.expert.main.MenuManager     - 菜单创建失败，错误码：40024
-  [INFO ] 2015-01-26 12:58:04,518           org.expert.main.MenuManager     - 菜单创建成功
-  [INFO ] 2015-01-26 13:02:06,185           org.expert.main.MenuManager     - 菜单创建成功
-  
