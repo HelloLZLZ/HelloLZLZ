@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+    <package name="project" namespace="/project" extends="struts-default">
+	
+		<global-results>
+			<result name="error" type="redirect">/resultPage/login_fail.jsp</result>
+			<result name="login" type="redirect">/loginPage/login.jsp</result>
+		</global-results>
+		
+       <action name="project_*" class="org.expert.action.ProjectAction" method="{1}">
+            <result name="create_success" type="redirect">/business/company_home.jsp</result>
+            <result name="create_fail">/resultPage/404fail.jsp</result>
+            <result name="search_bprojects">/business/project_company.jsp</result>
+           
+           <result name="getSProject">/business/project_company_searching.jsp</result>
+            <result name="getWProject">/business/project_company_working.jsp</result>
+            <result name="getCProject">/business/project_company_finished.jsp</result>
+            
+           <result name="signSchedule_success">/business/project_company_searching_closeproject_success.jsp</result>
+           <result name="signSchedule_fail">/business/project_company_searching_closeproject_fail.jsp</result>
+   			
+   			<result name="dealProject" type="redirectAction">
+   				<param name="namespace">/project</param>
+    			<param name="actionName">project_searchBprojects.action</param>
+   			</result>
+   			
+   			<result name="getApplyedList">/business/project_company_searching_applyexpert.jsp</result>
+   			<result name="getApplyedExpert">/business/project_company_searching_applyexpert_detail.jsp</result>
+           
+            <result name="getEProject">/expert/project_expert_working.jsp</result>
+            
+            <result name="getApyProject">/expert/project_expert_applying.jsp</result>
+            <result name="getCurProject">/expert/project_expert_working.jsp</result>
+            <result name="getFinProject">/expert/project_expert_finished.jsp</result>
+            <result name="getCloProject">/expert/project_expert_closed.jsp</result>
+            <result name="getBProject">/expert/classify_detail_expert.jsp</result>  
+		    <result name="apySuccess">/expert/classify_apply_expert_success.jsp</result>  
+		    <result name="apyFail">/expert/classify_apply_expert_fail.jsp</result>  
+
+            <result name="ExpertProjects">/expert/classify_list_expert.jsp</result>
+            <result name="getSearchProjects">/expert/classify_list_expert.jsp</result>      	
+        </action>  
+ 
+    </package>
+</struts>

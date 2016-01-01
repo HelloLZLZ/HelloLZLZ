@@ -1,0 +1,65 @@
+[INFO ] 2015-03-21 21:00:49,853         org.hibernate.cfg.Environment     - Hibernate 3.3.2.GA
+  [INFO ] 2015-03-21 21:00:49,883         org.hibernate.cfg.Environment     - hibernate.properties not found
+  [INFO ] 2015-03-21 21:00:50,007         org.hibernate.cfg.Environment     - Bytecode provider name : javassist
+  [INFO ] 2015-03-21 21:00:50,047         org.hibernate.cfg.Environment     - using JDK 1.4 java.sql.Timestamp handling
+  [INFO ] 2015-03-21 21:00:50,343       org.hibernate.cfg.Configuration     - configuring from resource: /hibernate.cfg.xml
+  [INFO ] 2015-03-21 21:00:50,343       org.hibernate.cfg.Configuration     - Configuration resource: /hibernate.cfg.xml
+  [INFO ] 2015-03-21 21:00:50,938       org.hibernate.cfg.Configuration     - Reading mappings from resource : org/expert/model/User.hbm.xml
+  [INFO ] 2015-03-21 21:00:51,387           org.hibernate.cfg.HbmBinder     - Mapping class: org.expert.model.User -> user
+  [INFO ] 2015-03-21 21:00:51,405       org.hibernate.cfg.Configuration     - Reading mappings from resource : org/expert/model/Expert.hbm.xml
+  [INFO ] 2015-03-21 21:00:51,445           org.hibernate.cfg.HbmBinder     - Mapping class: org.expert.model.Expert -> expert
+  [INFO ] 2015-03-21 21:00:51,457       org.hibernate.cfg.Configuration     - Reading mappings from resource : org/expert/model/Project.hbm.xml
+  [INFO ] 2015-03-21 21:00:51,488           org.hibernate.cfg.HbmBinder     - Mapping class: org.expert.model.Project -> project
+  [INFO ] 2015-03-21 21:00:51,677       org.hibernate.cfg.Configuration     - Reading mappings from resource : org/expert/model/Admin.hbm.xml
+  [INFO ] 2015-03-21 21:00:51,694           org.hibernate.cfg.HbmBinder     - Mapping class: org.expert.model.Admin -> admin
+  [INFO ] 2015-03-21 21:00:51,694       org.hibernate.cfg.Configuration     - Reading mappings from resource : org/expert/model/Business.hbm.xml
+  [INFO ] 2015-03-21 21:00:51,708           org.hibernate.cfg.HbmBinder     - Mapping class: org.expert.model.Business -> business
+  [INFO ] 2015-03-21 21:00:51,709       org.hibernate.cfg.Configuration     - Reading mappings from resource : org/expert/model/Vocation.hbm.xml
+  [INFO ] 2015-03-21 21:00:51,759           org.hibernate.cfg.HbmBinder     - Mapping class: org.expert.model.Vocation -> vocation
+  [INFO ] 2015-03-21 21:00:51,759       org.hibernate.cfg.Configuration     - Reading mappings from resource : org/expert/model/Domain.hbm.xml
+  [INFO ] 2015-03-21 21:00:51,782           org.hibernate.cfg.HbmBinder     - Mapping class: org.expert.model.Domain -> domain
+  [INFO ] 2015-03-21 21:00:51,783       org.hibernate.cfg.Configuration     - Reading mappings from resource : org/expert/model/Budget.hbm.xml
+  [INFO ] 2015-03-21 21:00:51,793           org.hibernate.cfg.HbmBinder     - Mapping class: org.expert.model.Budget -> budget
+  [INFO ] 2015-03-21 21:00:51,794       org.hibernate.cfg.Configuration     - Reading mappings from resource : org/expert/model/Privacy.hbm.xml
+  [INFO ] 2015-03-21 21:00:51,802           org.hibernate.cfg.HbmBinder     - Mapping class: org.expert.model.Privacy -> privacy
+  [INFO ] 2015-03-21 21:00:51,803       org.hibernate.cfg.Configuration     - Configured SessionFactory: null
+  [INFO ] 2015-03-21 21:00:51,853           org.hibernate.cfg.HbmBinder     - Mapping collection: org.expert.model.Expert.projects -> project
+  [INFO ] 2015-03-21 21:00:51,880           org.hibernate.cfg.HbmBinder     - Mapping collection: org.expert.model.Business.projects -> project
+  [INFO ] 2015-03-21 21:00:51,906 org.hibernate.connection.DriverManagerConnectionProvider     - Using Hibernate built-in connection pool (not for production use!)
+  [INFO ] 2015-03-21 21:00:51,906 org.hibernate.connection.DriverManagerConnectionProvider     - Hibernate connection pool size: 20
+  [INFO ] 2015-03-21 21:00:51,906 org.hibernate.connection.DriverManagerConnectionProvider     - autocommit mode: false
+  [INFO ] 2015-03-21 21:00:51,947 org.hibernate.connection.DriverManagerConnectionProvider     - using driver: com.mysql.jdbc.Driver at URL: jdbc:mysql://localhost:3306/expert
+  [INFO ] 2015-03-21 21:00:51,947 org.hibernate.connection.DriverManagerConnectionProvider     - connection properties: {user=root, password=****}
+  [INFO ] 2015-03-21 21:00:52,673     org.hibernate.cfg.SettingsFactory     - RDBMS: MySQL, version: 5.6.19
+  [INFO ] 2015-03-21 21:00:52,673     org.hibernate.cfg.SettingsFactory     - JDBC driver: MySQL-AB JDBC Driver, version: mysql-connector-java-5.1.7 ( Revision: ${svn.Revision} )
+  [INFO ] 2015-03-21 21:00:52,797         org.hibernate.dialect.Dialect     - Using dialect: org.hibernate.dialect.MySQLDialect
+  [INFO ] 2015-03-21 21:00:52,806 org.hibernate.transaction.TransactionFactoryFactory     - Using default transaction strategy (direct JDBC transactions)
+  [INFO ] 2015-03-21 21:00:52,808 org.hibernate.transaction.TransactionManagerLookupFactory     - No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+  [INFO ] 2015-03-21 21:00:52,808     org.hibernate.cfg.SettingsFactory     - Automatic flush during beforeCompletion(): disabled
+  [INFO ] 2015-03-21 21:00:52,809     org.hibernate.cfg.SettingsFactory     - Automatic session close at end of transaction: disabled
+  [INFO ] 2015-03-21 21:00:52,809     org.hibernate.cfg.SettingsFactory     - JDBC batch size: 15
+  [INFO ] 2015-03-21 21:00:52,809     org.hibernate.cfg.SettingsFactory     - JDBC batch updates for versioned data: disabled
+  [INFO ] 2015-03-21 21:00:52,811     org.hibernate.cfg.SettingsFactory     - Scrollable result sets: enabled
+  [INFO ] 2015-03-21 21:00:52,811     org.hibernate.cfg.SettingsFactory     - JDBC3 getGeneratedKeys(): enabled
+  [INFO ] 2015-03-21 21:00:52,811     org.hibernate.cfg.SettingsFactory     - Connection release mode: auto
+  [INFO ] 2015-03-21 21:00:52,812     org.hibernate.cfg.SettingsFactory     - Maximum outer join fetch depth: 2
+  [INFO ] 2015-03-21 21:00:52,812     org.hibernate.cfg.SettingsFactory     - Default batch fetch size: 1
+  [INFO ] 2015-03-21 21:00:52,812     org.hibernate.cfg.SettingsFactory     - Generate SQL with comments: disabled
+  [INFO ] 2015-03-21 21:00:52,812     org.hibernate.cfg.SettingsFactory     - Order SQL updates by primary key: disabled
+  [INFO ] 2015-03-21 21:00:52,812     org.hibernate.cfg.SettingsFactory     - Order SQL inserts for batching: disabled
+  [INFO ] 2015-03-21 21:00:52,812     org.hibernate.cfg.SettingsFactory     - Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+  [INFO ] 2015-03-21 21:00:52,833 org.hibernate.hql.ast.ASTQueryTranslatorFactory     - Using ASTQueryTranslatorFactory
+  [INFO ] 2015-03-21 21:00:52,833     org.hibernate.cfg.SettingsFactory     - Query language substitutions: {}
+  [INFO ] 2015-03-21 21:00:52,833     org.hibernate.cfg.SettingsFactory     - JPA-QL strict compliance: disabled
+  [INFO ] 2015-03-21 21:00:52,833     org.hibernate.cfg.SettingsFactory     - Second-level cache: enabled
+  [INFO ] 2015-03-21 21:00:52,833     org.hibernate.cfg.SettingsFactory     - Query cache: disabled
+  [INFO ] 2015-03-21 21:00:52,833     org.hibernate.cfg.SettingsFactory     - Cache region factory : org.hibernate.cache.impl.NoCachingRegionFactory
+  [INFO ] 2015-03-21 21:00:52,834     org.hibernate.cfg.SettingsFactory     - Optimize cache for minimal puts: disabled
+  [INFO ] 2015-03-21 21:00:52,834     org.hibernate.cfg.SettingsFactory     - Structured second-level cache entries: disabled
+  [INFO ] 2015-03-21 21:00:52,842     org.hibernate.cfg.SettingsFactory     - Statistics: disabled
+  [INFO ] 2015-03-21 21:00:52,842     org.hibernate.cfg.SettingsFactory     - Deleted entity synthetic identifier rollback: disabled
+  [INFO ] 2015-03-21 21:00:52,842     org.hibernate.cfg.SettingsFactory     - Default entity-mode: pojo
+  [INFO ] 2015-03-21 21:00:52,842     org.hibernate.cfg.SettingsFactory     - Named query checking : enabled
+  [INFO ] 2015-03-21 21:00:53,036 org.hibernate.impl.SessionFactoryImpl     - building session factory
+  [INFO ] 2015-03-21 21:00:53,817 org.hibernate.impl.SessionFactoryObjectFactory     - Not binding factory to JNDI, no JNDI name configured
+  

@@ -1,0 +1,33 @@
+@charset "utf-8";
+/* CSS Document */
+
+.tips_content{
+	height:50px;
+	line-height:50px;
+	background-color:#FFF;
+	text-align:center;
+	padding-top:80px;
+	padding-bottom:150px;
+	margin-top:10px;
+	margin-left:10px;
+	margin-right:10px;
+
+}
+
+.tips_content_font{
+	color:#333333;
+}
+
+.tips_btn{
+	text-align:center;
+	background-color:#09C;
+	margin-top:70px;
+	margin-left:10%;
+	margin-right:10%;
+
+}
+
+.tips_btn_font{
+	color:#FFF;
+}
+

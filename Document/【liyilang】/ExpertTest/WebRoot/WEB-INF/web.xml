@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" 
+	xmlns="http://java.sun.com/xml/ns/javaee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+  <display-name></display-name>	
+	<!-- Struts2的核心控制器FilterDispatcher被设计成了过滤器，通过<filter></filter>标签引入 -->
+	<filter>
+		<filter-name>struts2</filter-name>
+		<filter-class>org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter</filter-class>
+	</filter>
+
+	<filter-mapping>
+		<filter-name>struts2</filter-name>
+		<!-- 所有客户端请求都经由FilterDispatcher处理，并把过滤后的请求交给Struts2进行处理 -->
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+ 
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>CoreServlet</servlet-name>
+    <servlet-class>org.expert.servlet.CoreServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>loginServlet</servlet-name>
+    <servlet-class>org.expert.servlet.loginServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>UserExist</servlet-name>
+    <servlet-class>org.expert.servlet.UserExist</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>expert_center</servlet-name>
+    <servlet-class>org.expert.servlet.expert_center</servlet-class>
+  </servlet>
+
+  
+  <servlet-mapping>
+    <servlet-name>CoreServlet</servlet-name>
+    <url-pattern>/CoreServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>loginServlet</servlet-name>
+    <url-pattern>/loginServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UserExist</servlet-name>
+    <url-pattern>/UserExist</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>expert_center</servlet-name>
+    <url-pattern>/expert_center</url-pattern>
+  </servlet-mapping>
+
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>

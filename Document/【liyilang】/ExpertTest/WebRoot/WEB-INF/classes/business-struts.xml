@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+    <package name="business" namespace="/business" extends="struts-default">
+		<interceptors>
+			<interceptor name="authority" class="org.expert.interceptor.AuthorityInterceptor" />
+		</interceptors>
+		<global-results>
+			<result name="error" type="redirect">/resultPage/login_fail.jsp</result>
+			<result name="login" type="redirect">/loginPage/login.jsp</result>
+		</global-results>
+		
+       <action name="business_*" class="org.expert.action.BusinessAction" method="{1}">
+            <result type="redirect">/business/center_company.jsp</result>
+            <result name="init_success">/business/center_company.jsp</result>
+            <result name="enter_success">/business/center_company_profile.jsp</result>
+            <result name="create_success" type="redirect">/business/company_home.jsp</result>
+            <result name="create_fail">/resultPage/404fail.jsp</result>
+            <result name="search_bprojects">/business/project_company.jsp</result>
+       
+            <interceptor-ref name="authority"/>
+          	
+        </action>  
+ 
+    </package>
+</struts>

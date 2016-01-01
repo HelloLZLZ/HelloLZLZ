@@ -1,0 +1,26 @@
+@charset "utf-8";
+/* CSS Document */
+
+.project-item {
+		border-bottom: 1px solid #09C; 
+		min-height: 80px;
+		background-color:#FFF;  
+    	position: relative;
+		padding-left:10px;
+		padding-right:10px;
+	}
+	
+.project-name {
+		text-align:center;
+		padding:10px;
+		font-size:20px;
+		font-weight:bolder;
+		color:#09C;
+}
+	
+.project-job {
+		text-align:center;
+		color:#999;	
+	}
+	
+	

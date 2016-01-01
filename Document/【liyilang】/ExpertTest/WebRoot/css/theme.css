@@ -1,0 +1,165 @@
+@charset "utf-8";
+/* CSS Document */
+
+*{
+	margin:0;padding:0;border:0;
+}
+
+.header{
+	height:45px;
+	background-color:#09C;
+}
+
+.title_nobtn{
+	text-align:center;
+	line-height:45px;
+	font-size:20px;
+	color:#FFF;
+}
+
+.ui-btn-right {
+
+	font-size:20px;
+	color:#FFF;
+	padding-right:5px;
+	padding-top:5px;
+	padding-bottom:5px;
+}
+
+a{ 
+text-decoration:none;
+} 
+
+h1{
+	text-shadow:none;
+}
+
+h2{
+	text-shadow:none;
+}
+
+h3{
+	text-shadow:none;
+}
+
+h4{
+	text-shadow:none;
+}
+
+h5{
+	text-shadow:none;
+}
+
+h6{
+	text-shadow:none;
+}
+
+.footer {
+   position:fixed;
+   left:0px;
+   bottom:0px;
+   height:55px;
+   width:100%;
+   background:#FFF;
+}
+
+.footer_home {
+	text-align:center;
+	line-height:55px;
+	width:33%;
+	font-size:20px;
+	position: absolute;
+	border-top:1px solid #CCC;
+	border-right:1px solid #CCC;
+}
+
+.footer_project {
+	text-align:center;
+	line-height:55px;
+	width:34%;
+	font-size:20px;
+	float:right;
+	border-top:1px solid #CCC;
+	border-right:1px solid #CCC;
+}
+
+.footer_center {
+	text-align:center;
+	line-height:55px;
+	width:33%;
+	font-size:20px;
+	float:right;
+	border-top:1px solid #CCC;
+}
+
+.footer_font{
+	color:#FFF;
+	text-shadow:none;
+}
+
+.btn_green {
+	height:45px;
+	line-height:45px;
+	text-align:center;
+	margin:10px;
+	background-color:#0C6;
+	color:#FFF;
+	text-shadow:none;
+}
+
+.btn_red {
+	height:45px;
+	line-height:45px;
+	text-align:center;
+	margin:10px;
+	background-color:#C30;
+	color:#FFF;
+	text-shadow:none;
+}
+
+.btn_blue {
+	height:45px;
+	line-height:45px;
+	text-align:center;
+	margin:10px;
+	background-color:#09C;
+	color:#FFF;
+	text-shadow:none;
+}
+
+
+.btn_word {
+	height:45px;
+	color:#FFF;
+	line-height:45px;
+	background-color:transparent;
+	font-size:20px;
+	font-weight:bold;
+}
+
+.btn_bg {
+	padding:5px 5px 5px 5px;
+	background-color:#FFF;
+}
+
+.arrow {
+	height:45px;
+	color:#FFF;
+	line-height:45px;
+	background-color:transparent;
+	font-size:28px;
+	float:right;
+	margin-right:8px;
+}
+
+.tip_grey {
+	font-size:13px;
+	color:#999;
+}
+
+.none_line{
+	height:1px;
+	width:100%;
+}
+	
+

@@ -1,0 +1,110 @@
+@charset "utf-8";
+/* CSS Document */
+
+.login_body{
+	margin-left:10px;
+	margin-right:10px;
+	margin-top:10px;
+	background-color:#FFF;
+}
+
+.line{
+	height:50px;
+	padding-left:10px;
+	padding-right:10px;
+	padding-top:15px;
+}
+
+.label{
+	height:50px;
+	width:30%;
+	line-height:50px;
+	border-radius:20px 0px 0px 20px;
+	background-color:#09C;
+	text-align:right;
+	float:left;
+}
+
+.label_font{
+	font-size:16px;
+	color:#FFF;
+	text-shadow:none;
+	text-align:right;
+}
+
+.text{
+	height:48px;
+	line-height:48px;
+	width:69%;
+	float:left;
+	font-size:16px;
+	text-align:left;
+	background-color:#FFF;
+	border-radius:0px 20px 20px 0px;
+	border-bottom:1px solid #CCC;
+	border-right:1px solid #CCC;
+	border-top:1px solid #CCC;
+	text-shadow:none;
+}
+
+.list{	
+	height:50px;
+	width:69%;
+	font-size:16px;
+	color:#333;
+	float:left;
+	text-align:center;
+	border-bottom:1px solid #CCC;
+	border-right:1px solid #CCC;
+	border-top:1px solid #CCC;	
+	text-shadow:none;
+	border-bottom-left-radius:0px;
+	border-top-left-radius:0px;
+	border-bottom-right-radius:20px;
+	border-top-right-radius:20px;
+	background-color:#FFF;
+}
+
+.checkbox_box{
+	height:20px;
+	width:35px;
+	float:left;
+	margin-left:10px;
+}
+
+.checkbox_label{
+	height:35px;
+	float:left;
+	text-align:center;
+	color:#333;
+}
+
+.line_two_left{
+	height:35px;
+	width:48%;
+	float:left;
+	padding-top:15px;
+	text-shadow:none;
+	text-align:center;
+	border:1px solid #CCC;
+	border-radius:20px;
+	margin-right:1%;
+}
+
+.line_two_right{
+	height:35px;
+	width:48%;
+	float:right;
+	padding-top:15px;
+	text-align:center;
+	border:1px solid #CCC;
+	border-radius:20px;
+	margin-left:1%;
+}
+
+.line_two_font{
+	color:#333;
+	font-weight:lighter;
+	font-size:16px;
+}
+	

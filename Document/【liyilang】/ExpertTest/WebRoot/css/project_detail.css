@@ -1,0 +1,28 @@
+@charset "utf-8";
+/* CSS Document */
+
+.project_profile_field
+{
+	padding-top:5px;
+	padding-bottom:10px;
+	padding-left:2px;
+	margin-left:10px;
+	margin-right:10px;
+	border-bottom:1px solid #09C;
+}
+
+.project_profile_class
+{
+	line-height:20px;
+	font-size:13px;
+	color:#09C;
+	margin-bottom:5px;
+}
+
+.project_profile_detail
+{
+	width:100%;
+	line-height:30px;
+	font-size:16px;
+	color:#333;
+}
